@@ -9,18 +9,13 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/recipes")
-def recipes():
-    return render_template("recipes.html")
+@app.route("/specs")
+def specs():
+    return render_template("specs.html")
 
 @app.route("/contact")
-def recipes():
-    return render_template("contact.html")
-
-
-
-
-
+def contact():
+     return render_template("contact.html")
 
 
 if __name__ == "__main__":
