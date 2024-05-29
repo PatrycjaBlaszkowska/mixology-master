@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>Welcome to the Mixology Master</h1>
-    <a href="{{ url_for('login') }}">Login</a>
-    <a href="{{ url_for('register') }}">Register</a>
+    <div id="account-section">
+        <a href="{{ url_for('login') }}" class="btn btn-secondary">Login</a>
+        <a href="{{ url_for('register') }}" class="btn btn-secondary">Register</a>
+    </div>
     <div id="introduction">
         <p>Looking for a cocktail recipe for a party night?</p>
         <p>Or maybe you have a custom spec you want to share with others?</p>
