@@ -1,21 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>Register Page</h1>
-    <form>
-        <div class="form-group row col-6">
-            <label for="username">Username</label>
-            <input type="email" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Username">
-          </div>
-        <div class="form-group row col-6">
-          <label for="user-email">Email address</label>
-          <input type="email" class="form-control" id="user-email" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group row col-6">
-          <label for="user-passowrd">Password</label>
-          <input type="password" class="form-control" id="user-passowrd" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+    <form method="POST" action="">
+      {{ form.hidden_tag() }}
+      {{ form.username }}
+      {{ form.password }}
+      {{ form.submit }}
       </form>
     <a href="{{ url_for('login') }}">Already have an account? Log In! </a>
 {% endblock %}
