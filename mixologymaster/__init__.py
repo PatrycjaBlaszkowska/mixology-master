@@ -14,4 +14,4 @@ app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
-from mixologymaster import routes #noqa
+from mixologymaster import routes 

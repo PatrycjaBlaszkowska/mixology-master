@@ -5,15 +5,24 @@ from .models import RegisterForm
 from .models import LoginForm
 from . import bcrypt
 
+
 @app.route("/")
 def index():
     # Render index(home) page as landing page
     return render_template("index.html")
 
+
 @app.route("/specs")
 def specs():
     #Render specs(recipes) page
     return render_template("specs.html")
+
+
+@app.route("/new-recipe", methods=['GET', 'POST'])
+def new_recipe():
+    #Render a form to add new recipe
+    return render_template("new-recipe.html")
+
 
 @app.route("/contact")
 def contact():
