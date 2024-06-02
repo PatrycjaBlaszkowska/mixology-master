@@ -1,15 +1,14 @@
 from mixologymaster import db
-from flask_login import UserMixin
+from flask_login import UserMixin, LoginManager
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import InputRequired, Lenght, ValidationError
-
+from wtforms.validators import InputRequired, Length, ValidationError
 
 class User(db.Model, UserMixin):
     # schema for the User model
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(15), unique=True, nullable=False)
-    password = db.Column(db.String(50), nullable=False)
+    username = db.Column(db.String(60), unique=True, nullable=False)
+    password = db.Column(db.String(200), nullable=False)
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string

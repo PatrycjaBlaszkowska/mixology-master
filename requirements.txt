@@ -13,3 +13,5 @@ SQLAlchemy==1.4.18
 typing_extensions==4.11.0
 Werkzeug==2.0.1
 zipp==3.19.0
+Flask-WTF==0.15.1
+Flask-Bcrypt==0.7.1
