@@ -7,26 +7,32 @@
             <div class="col-md-12">
                 <form class="card bg-dark" method="POST" action="{{ url_for('new_recipe') }}">
                     <div class="form-group">
-                        <label for="coctail_name">Cocktail Name :</label>
-                        <input type="email" class="form-control" id="coctail_name" name="coctail_name" required>
+                        <label for="cocktail_name">Cocktail Name :</label>
+                        <input type="text" class="form-control" id="cocktail_name" name="cocktail_name" required>
                     </div>
                     <div class="form-group">
-                        <label for="category">Category :</label>
-                        <select class="form-control" id="category" name="category">
-                        <option>Vodka</option>
-                        <option>Whisky</option>
-                        <option>Gin</option>
-                        <option>Rum</option>
-                        </select>
+                        <label for="cocktail_category">Category :</label>
+                        <select class="form-control" id="cocktail_category" name="cocktail_category">
+                            <option>Vodka</option>
+                            <option>Whisky</option>
+                            <option>Gin</option>
+                            <option>Rum</option>
+                            <option>Tequila</option>
+                        </select> 
+                    </div> 
+                    <div class="form-group">
+                        <label for="ingredients">Ingredients :</label>
+                        <textarea class="form-control" id="ingredients" rows="3" name="ingredients" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="ingridients">Ingridients : </label>
-                        <textarea class="form-control" id="ingridients" rows="3" name="ingridients" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="prep_instructions">Preparation instructions: </label>
+                        <label for="prep_instructions">Preparation instructions :</label>
                         <textarea class="form-control" id="prep_instructions" rows="3" name="prep_instructions" required></textarea>
                     </div>
+                    <div class="form-group">
+                        <label for="image">Image :</label>
+                        <input type="file" class="form-control" id="image" name="image">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>

@@ -17,11 +17,13 @@ class User(db.Model, UserMixin):
 
 class Cocktail(db.Model):
     # schema for the Cocktail model
-    coctail_name = db.Column(db.String, primary_key=True, nullable=False, unique=True)
-    category = db.Column(db.String, nullable=False)
+    cocktail_name = db.Column(db.String, primary_key=True, nullable=False, unique=True)
+    cocktail_category = db.Column(db.String, nullable=False)
     user_id = (db.Integer, db.ForeignKey("user.id", ondelete="CASCADE"))
     ingredients = db.Column(db.String, nullable=False)
     prep_instructions = db.Column(db.String, nullable=False)
+    image_url = db.Column(db.String(255))
+
 
 class RegisterForm(FlaskForm):
     # username field and length validation

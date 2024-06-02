@@ -1,5 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>Recipes Page</h1>
-        <a href="{{ url_for('new_recipe') }}">Add new cocktail spec</a>
+    <div class="container">
+        <div class="row">
+            {% for  cocktail in cocktails %}
+            <div class="col-12">
+                <div class="card bg-dark" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ cocktail.cocktail_name }}</h5>
+                      <p>{{ cocktail.cocktail_category }}</p>
+                    </div>
+                  </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <a href="{{ url_for('new_recipe') }}">Add new cocktail spec</a>
 {% endblock %}
