@@ -22,7 +22,8 @@ class Cocktail(db.Model):
     user_id = (db.Integer, db.ForeignKey("user.id", ondelete="CASCADE"))
     ingredients = db.Column(db.String, nullable=False)
     prep_instructions = db.Column(db.String, nullable=False)
-    image_url = db.Column(db.String(255))
+    image_url = db.Column(db.String(255), nullable=False)
+    description = db.Column(db.String, nullable=False)
 
 
 class RegisterForm(FlaskForm):

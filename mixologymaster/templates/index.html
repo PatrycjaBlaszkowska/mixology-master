@@ -2,11 +2,15 @@
 {% block content %}
     <div id="hero-image">
     </div>
+    {% if current_user.is_authenticated %}
+        <h1>Welcome back {{ current_user.username }} !</h1>
+    {% else %}
         <h1>Welcome to the Mixology Master</h1>
-    <div id="account-section" class="row col-12">
+    {% endif %}
+        <div id="account-section" class="row col-12">
         <a href="{{ url_for('login') }}" class="btn btn-secondary">Login</a>
         <a href="{{ url_for('register') }}" class="btn btn-secondary">Register</a>
-        <a href="" class="btn btn-secondary">Log out</a>
+        <a href="{{ url_for('logout') }}" class="btn btn-secondary">Log out</a>
     </div>
     <div id="introduction" class="text-center">
         <p>Looking for a cocktail recipe for a party night?</p>

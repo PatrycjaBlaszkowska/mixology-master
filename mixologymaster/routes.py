@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for,request
+from flask import Flask, render_template, redirect, url_for,request,flash
 from mixologymaster import app, db
 from werkzeug.utils import secure_filename
 from .models import User
@@ -6,6 +6,7 @@ from .models import Cocktail
 from .models import RegisterForm
 from .models import LoginForm
 from . import bcrypt
+from flask_login import LoginManager, current_user, login_user, login_required, logout_user
 
 
 # Configuration for file uploads
@@ -15,6 +16,15 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login' # Ensure redirection to login page if not authenticated
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 
 
 @app.route("/")
@@ -65,6 +75,12 @@ def new_recipe():
     
     return render_template("new-recipe.html")
 
+@app.route("/delete_cocktail/<cocktail_name>")
+def delete_cocktail(cocktail_name):
+    cocktail = Cocktail.query.get_or_404(cocktail_name)
+    db.session.delete(cocktail)
+    db.session.commit()
+    return redirect(url_for('specs'))
 
 @app.route("/contact")
 def contact():
@@ -76,23 +92,6 @@ def contact():
 def confirmation():
     #Render thank you page
     return render_template("confirmation.html")
-
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    form = LoginForm()
-    if request.method == 'GET':
-        return render_template('login.html', form=form)
-    elif request.method ==  'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
-
-        user = User.query.filter(User.username == username).first()
-
-        if bcrypt.check_password_hash(user.password, password):
-            login_user(user)
-            return redirect(url_for('index'))
-        else:
-            return 'Failed'
 
 
 @ app.route('/register', methods=['GET', 'POST'])
@@ -112,6 +111,37 @@ def register():
         db.session.add(user)
         db.session.commit()
         return redirect(url_for('login'))
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if request.method == 'GET':
+        return render_template('login.html', form=form)
+    elif request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        user = User.query.filter(User.username == username).first()
+
+        if user is None:
+            flash('User does not exist.', 'danger')
+            return redirect(url_for('login'))
+
+        # Debugging output
+        print(f"User found: {user.username}")
+
+        if bcrypt.check_password_hash(user.password, password):
+            login_user(user)
+            print(f"Login successful for user: {user.username}")
+            return redirect(url_for('index'))
+        else:
+            flash('Invalid username or password.', 'danger')
+            print(f"Login failed for user: {username}")
+
+            return redirect(url_for('index'))
+
+    return 'Failed'  # Fallback response
 
 
 @app.route('/logout')
