@@ -5,12 +5,11 @@
         <div class="row">
             {% for cocktail in cocktails %}
             <div class="col-12">
-                <div class="card bg-dark" style="width: 18rem;">
+                <div class="card bg-dark" style="width: 30rem;">
                     <div class="card-body">
                         <h5 class="card-title">{{ cocktail.cocktail_name }}</h5>
                         <p>{{ cocktail.cocktail_category }}</p>
-                        <p>{{ cocktail.cocktail_description}}</p>
-                        <a href=""></a>
+                        <p>{{ cocktail.description}}</p>
                         <a href="{{ url_for('delete_cocktail', cocktail_name=cocktail.cocktail_name) }}" class="btn">Delete</a>
                     </div>
                 </div>
