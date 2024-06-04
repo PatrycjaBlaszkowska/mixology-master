@@ -40,3 +40,8 @@ h1 {
     text-decoration: underline; 
 }
 
+/*specs page*/
+
+.card-title {
+    text-transform: uppercase;
+}
