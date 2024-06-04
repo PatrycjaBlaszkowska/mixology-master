@@ -135,7 +135,7 @@ def login():
         if bcrypt.check_password_hash(user.password, password):
             login_user(user)
             print(f"Login successful for user: {user.username}")
-            return redirect(url_for('index'))
+            return redirect(url_for('dashboard', username=user.username))
         else:
             flash('Invalid username or password.', 'danger')
             print(f"Login failed for user: {username}")
@@ -143,6 +143,12 @@ def login():
             return redirect(url_for('index'))
 
     return 'Failed'  # Fallback response
+
+
+@app.route("/dashboard/<username>")
+def dashboard(username):
+    # Render user dashboard
+    return render_template("dashboard.html", username=username)
 
 
 @app.route('/logout')
