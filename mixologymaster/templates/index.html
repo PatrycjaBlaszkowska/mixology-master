@@ -4,14 +4,19 @@
     </div>
     {% if current_user.is_authenticated %}
         <h1>Welcome back {{ current_user.username }} !</h1>
+
+        <div class="row col-12 account-section">
+            <a href="{{ url_for('dashboard', username=current_user.username) }}">Dashboard</a>
+            <a href="{{ url_for('logout') }}" class="btn btn-secondary">Log out</a>
+        </div>
     {% else %}
         <h1>Welcome to the Mixology Master</h1>
+        <div class="row col-12 account-section">
+            <a href="{{ url_for('login') }}" class="btn btn-secondary">Login</a>
+            <a href="{{ url_for('register') }}" class="btn btn-secondary">Register</a>
+        </div>
     {% endif %}
-        <div id="account-section" class="row col-12">
-        <a href="{{ url_for('login') }}" class="btn btn-secondary">Login</a>
-        <a href="{{ url_for('register') }}" class="btn btn-secondary">Register</a>
-        <a href="{{ url_for('logout') }}" class="btn btn-secondary">Log out</a>
-    </div>
+
     <div id="introduction" class="text-center">
         <p>Looking for a cocktail recipe for a party night?</p>
         <p>Or maybe you have a custom spec you want to share with others?</p>

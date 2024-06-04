@@ -31,6 +31,7 @@ def specs():
     return render_template("specs.html", cocktails=cocktails)
 
 @app.route("/add_cocktail", methods=['GET', 'POST'])
+@login_required
 def add_cocktail():
     if request.method == 'POST':
         cocktail_name = request.form['cocktail_name']
@@ -146,6 +147,7 @@ def login():
 
 
 @app.route("/dashboard/<username>")
+@login_required
 def dashboard(username):
     # Render user dashboard
     return render_template("dashboard.html", username=username)
