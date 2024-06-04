@@ -9,15 +9,6 @@ from . import bcrypt
 from flask_login import LoginManager, current_user, login_user, login_required, logout_user
 
 
-# # Configuration for file uploads
-# UPLOAD_FOLDER = 'path/to/upload/directory'
-# ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
-# app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-# def allowed_file(filename):
-#     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login' # Ensure redirection to login page if not authenticated
@@ -39,8 +30,8 @@ def specs():
     cocktails = list(Cocktail.query.order_by(Cocktail.cocktail_name).all())
     return render_template("specs.html", cocktails=cocktails)
 
-@app.route("/new_recipe", methods=['GET', 'POST'])
-def new_recipe():
+@app.route("/add_cocktail", methods=['GET', 'POST'])
+def add_cocktail():
     if request.method == 'POST':
         cocktail_name = request.form['cocktail_name']
         cocktail_category = request.form['cocktail_category']
@@ -48,15 +39,6 @@ def new_recipe():
         prep_instructions = request.form['prep_instructions']
         user_id = current_user.id
         description = request.form.get('description') 
-
-        #  # Handle file upload
-        # if 'image' in request.files:
-        #     image_file = request.files['image']
-        #     if image_file and allowed_file(image_file.filename):
-        #         filename = secure_filename(image_file.filename)
-        #         image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        #         image_file.save(image_path)
-        #         image_url = image_path
 
         # Ensure all required fields are filled
         if not all([cocktail_name, cocktail_category, ingredients, prep_instructions]):
@@ -74,26 +56,26 @@ def new_recipe():
         db.session.commit()
         return redirect(url_for('specs'))
     
-    return render_template("new-recipe.html")
+    return render_template("add_cocktail.html")
 
-# @app.route("/edit_cocktail/<cocktail_name>", methods=["GET", "POST"])
-# def edit_cocktail(cocktail_name):
-#     cocktail = Cocktail.query.get_or_404(cocktail_name)
+@app.route("/edit_cocktail/<int:cocktail_id>", methods=["GET", "POST"])
+def edit_cocktail(cocktail_id):
+    cocktail = Cocktail.query.get_or_404(cocktail_id)
     
-#     if request.method == "POST":
-#         cocktail.cocktail_name = request.form.get("cocktail_name")
-#         cocktail.category = request.form.get("category")
-#         cocktail.description = request.form.get("description")
-#         cocktail.ingredients = request.form.get("ingredients")
-#         cocktail.prep_instructions = request.form.get("prep_instructions")
+    if request.method == "POST":
+        cocktail.cocktail_name = request.form.get("cocktail_name")
+        cocktail.category = request.form.get("category")
+        cocktail.description = request.form.get("description")
+        cocktail.ingredients = request.form.get("ingredients")
+        cocktail.prep_instructions = request.form.get("prep_instructions")
 
-#         db.session.commit()
-#         return redirect(url_for("specs"))
+        db.session.commit()
+        return redirect(url_for("specs"))
     
-#     return render_template("edit_cocktail.html", cocktail=cocktail)
+    return render_template("edit_cocktail.html", cocktail=cocktail)
 
 
-@app.route("/delete_cocktail/int(<cocktail_id>)")
+@app.route("/delete_cocktail/<int:cocktail_id>")
 def delete_cocktail(cocktail_id):
     cocktail = Cocktail.query.get_or_404(cocktail_id)
     db.session.delete(cocktail)

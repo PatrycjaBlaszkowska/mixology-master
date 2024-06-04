@@ -1,22 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h1>Edit a cocktail</h1>
+    <h1>Add a new cocktail spec</h1>
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-12">
-                <form class="card bg-dark" method="POST" action="#" enctype="multipart/form-data"> 
+                <form class="card bg-dark" method="POST" action="{{ url_for('add_cocktail') }}" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="cocktail_name">Cocktail Name :</label>
-                        <input type="text" class="form-control" id="cocktail_name" name="cocktail_name" value="{{ cocktail.cocktail_name }}" required>
+                        <input type="text" class="form-control" id="cocktail_name" name="cocktail_name" required>
                     </div>
                     <div class="form-group">
-                        <label for="description">Cocktail description :</label>
-                        <textarea class="form-control" id="description" rows="2" name="description" value="{{ cocktail.description }}" required></textarea>
+                        <label for="prep_instructions">Cocktail description :</label>
+                        <textarea class="form-control" id="description" rows="2" name="description" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="cocktail_category">Category :</label>
-                        <select class="form-control" id="cocktail_category" name="cocktail_category" value="{{ cocktail.cocktail_category }}">
+                        <select class="form-control" id="cocktail_category" name="cocktail_category">
                             <option>Vodka</option>
                             <option>Whisky</option>
                             <option>Gin</option>
@@ -26,17 +26,17 @@
                     </div> 
                     <div class="form-group">
                         <label for="ingredients">Ingredients :</label>
-                        <textarea class="form-control" id="ingredients" rows="3" name="ingredients" value="{{ cocktail.ingredients }}" required></textarea>
+                        <textarea class="form-control" id="ingredients" rows="3" name="ingredients" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="prep_instructions">Preparation instructions :</label>
-                        <textarea class="form-control" id="prep_instructions" rows="3" name="prep_instructions" value="{{ cocktail.instructions }}" required></textarea>
+                        <textarea class="form-control" id="prep_instructions" rows="3" name="prep_instructions" required></textarea>
                     </div>
                     <!-- <div class="form-group">
                         <label for="image">Image :</label>
                         <input type="file" class="form-control" id="image" name="image">
                     </div> -->
-                    <button type="submit" class="btn btn-primary">Edit cocktail</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
