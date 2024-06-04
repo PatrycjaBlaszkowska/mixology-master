@@ -1,14 +1,15 @@
 /*general css*/
 body {
     font-family: 'Roboto', serif;
-    background-color: black;
-    color:aliceblue;
+    background-color: #748D92;
+    color: #FAFAFA;
 }
 
 h1 {
-    color: blueviolet;
+    color: #FAFAFA;
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
 }
 
 /*home page section*/
@@ -17,5 +18,25 @@ h1 {
     height: 600px;
     width: 100%;
     background: url("../images/hero-img.jpeg") center bottom / cover no-repeat fixed;
+}
+
+.btn-bg {
+    background-color: #2E3944;
+    color: #FAFAFA;
+}
+
+
+#introduction p, #info-section p { 
+    font-size: 16px; 
+    line-height: 1.5; 
+}
+
+#info-section a { 
+    color: #2E3944;
+    text-decoration: none; 
+}
+
+#info-section a:hover { 
+    text-decoration: underline; 
 }
 
