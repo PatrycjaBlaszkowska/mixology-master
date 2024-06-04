@@ -10,7 +10,14 @@
                         <h5 class="card-title">{{ cocktail.cocktail_name }}</h5>
                         <p>{{ cocktail.cocktail_category }}</p>
                         <p>{{ cocktail.description}}</p>
-                        <a href="{{ url_for('delete_cocktail', cocktail_name=cocktail.cocktail_name) }}" class="btn">Delete</a>
+                        <p> {{ cocktail.user_id }}</p>
+
+                        {% if current_user.id == cocktail.user_id %}
+                            <a href="{{ url_for('delete_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="btn">Delete</a>
+                        
+                        {% else %}
+                            <a href="#">Read</a> 
+                        {% endif %}   
                     </div>
                 </div>
             </div>

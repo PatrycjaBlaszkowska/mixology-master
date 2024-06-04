@@ -46,7 +46,7 @@ def new_recipe():
         cocktail_category = request.form['cocktail_category']
         ingredients = request.form['ingredients']
         prep_instructions = request.form['prep_instructions']
-        user_id = request.form.get('user_id') 
+        user_id = current_user.id
         description = request.form.get('description') 
 
         #  # Handle file upload
@@ -93,9 +93,9 @@ def new_recipe():
 #     return render_template("edit_cocktail.html", cocktail=cocktail)
 
 
-@app.route("/delete_cocktail/<cocktail_name>")
-def delete_cocktail(cocktail_name):
-    cocktail = Cocktail.query.get_or_404(cocktail_name)
+@app.route("/delete_cocktail/int(<cocktail_id>)")
+def delete_cocktail(cocktail_id):
+    cocktail = Cocktail.query.get_or_404(cocktail_id)
     db.session.delete(cocktail)
     db.session.commit()
     return redirect(url_for("specs"))
