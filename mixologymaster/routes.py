@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for,request,flash
+from flask import Flask, render_template, redirect, url_for, request, flash
 from mixologymaster import app, db
 from werkzeug.utils import secure_filename
 from .models import User
@@ -110,8 +110,16 @@ def register():
 
         user = User(username=username, password=hashed_password)
 
+        # Check if username already exists
+        existing_user = User.query.filter_by(username=username).first()
+        if existing_user:
+            flash('Username already taken. Please choose a different one.', 'danger')
+            return redirect(url_for('register'))
+
         db.session.add(user)
         db.session.commit()
+
+        flash('Your account has been created! You can now log in.', 'success')
         return redirect(url_for('login'))
 
 

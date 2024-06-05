@@ -5,13 +5,19 @@
         <h1 class="text-white">Hi {{ current_user.username }}</h1>
         <a href="{{ url_for('add_cocktail') }}" class="btn btn-primary">Add New Cocktail Spec</a>
     </div>
-    <div>
-        <p>Manage your specs here: </p>
-    </div>
+    {% if current_user.is_admin %}
+        <div>
+            <p>Manage all specs here: </p>
+        </div>
+    {% else %}
+        <div>
+            <p>Manage your specs here: </p>
+        </div>
+    {% endif %}
     <div class="row">
         {% set has_cocktails = False %}
         {% for cocktail in cocktails %}
-            {% if current_user.id == cocktail.user_id %}
+            {% if current_user.id == cocktail.user_id or current_user.is_admin %}
                 {% set has_cocktails = True %}
                 <div class="col-md-6 mb-4">
                     <div class="card bg-dark text-white h-100">
@@ -29,8 +35,10 @@
                 </div>
             {% endif %}
         {% endfor %}
-        {% if not has_cocktails %}
+        {% if not has_cocktails and not current_user.is_admin %}
             <p class="text-white">Please add your first cocktail to see it here!</p>
+        {% elif not has_cocktails and current_user.is_admin %}
+            <p>No cocktails to show!</p>
         {% endif %}
     </div>
 </div>
