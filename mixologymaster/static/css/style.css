@@ -25,19 +25,33 @@ h1 {
     color: #FAFAFA;
 }
 
+#info-section {
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
 #introduction p, #info-section p { 
     font-size: 16px; 
     line-height: 1.5; 
 }
 
-#info-section a { 
+#introduction a , #specs-link-section a { 
     color: #2E3944;
     text-decoration: none; 
 }
 
-#info-section a:hover { 
+#introduction a:hover , #specs-link-section a:hover { 
     text-decoration: underline; 
+}
+
+#devider {
+    height: 400px;
+    width: 100%;
+    background: url("../images/devider.jpg") center center / cover no-repeat fixed;
+}
+
+#specs-link-section {
+    padding-top: 1rem;
 }
 
 /*specs page*/
@@ -45,3 +59,4 @@ h1 {
 .card-title {
     text-transform: uppercase;
 }
+

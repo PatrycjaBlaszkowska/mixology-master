@@ -7,15 +7,44 @@
     {% else %}
         <h1>Welcome to the Mixology Master</h1>
     {% endif %}
-
+<!-- Introduction section-->
     <div id="introduction" class="text-center">
-        <p>Looking for a cocktail recipe for a party night?</p>
-        <p>Or maybe you have a custom spec you want to share with others?</p>
-        <p>Mixology Master is a place for you!</p>
+        <div>
+            <p>Looking for a cocktail recipe for a party night?</p>
+            <p>Or maybe you have a custom spec you want to share with others?</p>
+            <p>Mixology Master is a place for you!</p>
+        </div>
+        <div>
+            <p>Mixology Master is free to use platform.</p>
+            <p>You can browser through recipes with no account!</p>
+            <p>If you wish to share your own recipe, please create free account <a href="{{ url_for('register') }}">here.</a></p>
+        </div>
     </div>
+<!-- Info section-->
     <div id="info-section" class="text-center">
-        <p>Mixology Master is free to use platform.</p>
-        <p>You can browser through recipes with no account!</p>
-        <p>If you wish to share your own recipe, please create free account <a href="{{ url_for('register') }}">here.</a></p>
+        <div>
+            <p>What cocktail spec means?</p>
+            <p>
+                A cocktail spec, short for specification, is a detailed and precise recipe for making a specific cocktail. <br>
+                It includes the exact measurements of each ingredient, the specific type and brand of alcohol or mixer to use, <br>
+                the method of preparation, and any garnishes or finishing touches to ensure consistency in the drink's flavor and presentation.
+            </p>
+        </div>
+        <div>
+            <p>Is bartender kit needed to make cocktails?</p>
+            <p>
+                It is not required to have a bartender kit to make cocktails, but having one can make the process easier and more efficient. <br>
+                A basic bartender kit typically includes essential tools such as a shaker, jigger, strainer, muddler, and bar spoon. <br>
+                These tools can help you measure ingredients accurately, mix drinks properly, and strain out any unwanted particles.
+            </p>
+        </div>
+    </div>
+<!-- Bartender set img-->
+<div id="devider">
+</div>
+<!-- Section conecting home page and the specs page-->
+    <div id="specs-link-section" class="text-center">
+        <p>Excited to join bartendering world?</p>
+        <p>Check out our specs <a href="{{ url_for('specs') }}">here!</a></p>
     </div>
 {% endblock %}
