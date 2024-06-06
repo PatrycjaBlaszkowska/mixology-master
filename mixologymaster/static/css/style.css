@@ -3,6 +3,8 @@ body {
     font-family: 'Roboto', serif;
     background-color: #748D92;
     color: #FAFAFA;
+    font-size: 16px; 
+    line-height: 1.5; 
 }
 
 h1 {
@@ -30,11 +32,6 @@ h1 {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-#introduction p, #info-section p { 
-    font-size: 16px; 
-    line-height: 1.5; 
-}
-
 #introduction a , #specs-link-section a { 
     color: #2E3944;
     text-decoration: none; 
@@ -52,6 +49,7 @@ h1 {
 
 #specs-link-section {
     padding-top: 1rem;
+    font-size: 20px;
 }
 
 /*specs page*/
