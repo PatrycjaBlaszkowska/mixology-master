@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-12">
-                <form class="card bg-dark" method="POST" action="" enctype="multipart/form-data"> 
+                <form class="card bg-dark" method="POST" action=""> 
                     <div class="form-group">
                         <label for="cocktail_name">Cocktail Name :</label>
                         <input type="text" class="form-control" id="cocktail_name" name="cocktail_name" value="{{ cocktail.cocktail_name }}" required>
@@ -32,10 +32,6 @@
                         <label for="prep_instructions">Preparation instructions :</label>
                         <textarea class="form-control" id="prep_instructions" rows="3" name="prep_instructions" value="{{ cocktail.instructions }}" required></textarea>
                     </div>
-                    <!-- <div class="form-group">
-                        <label for="image">Image :</label>
-                        <input type="file" class="form-control" id="image" name="image">
-                    </div> -->
                     <button type="submit" class="btn btn-primary">Edit cocktail</button>
                 </form>
             </div>

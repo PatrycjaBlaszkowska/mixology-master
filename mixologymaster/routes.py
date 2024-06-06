@@ -98,6 +98,8 @@ def confirmation():
 
 @ app.route('/register', methods=['GET', 'POST'])
 def register():
+    # Takes user data and handle register/ validation process
+
     form = RegisterForm()
 
     if request.method == 'GET': 
@@ -125,6 +127,7 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    # Takes user data and handle login verification process
     form = LoginForm()
     if request.method == 'GET':
         return render_template('login.html', form=form)
@@ -163,5 +166,25 @@ def dashboard(username):
 
 @app.route('/logout')
 def logout():
+    # Log user out
     logout_user()
     return redirect(url_for('index'))
+
+
+@app.route("/change_username/<username>", methods=["GET", "POST"])
+def change_username(username):
+    user = User.query.get_or_404(username)
+    
+    if request.method == "POST":
+        user.username = request.form.get("username")
+        db.session.commit()
+        return redirect(url_for("/dashboard/<username>"))
+    
+    return render_template("edit_username.html", username=username)
+
+app.route('delete_account/<username>')
+def delete_account(username):
+    user = User.query.get_or_404(username)
+    db.session.delete(user)
+    db.session.commit()
+    return redirect(url_for("/"))
