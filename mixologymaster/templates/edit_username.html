@@ -8,9 +8,10 @@
                 <form class="card bg-dark" method="POST" action=""> 
                     <div class="form-group">
                         <label for="username">Enter new username :</label>
-                        <input type="text" class="form-control" id="username" name="username" value="{{ user.username }}" required>
+                        <input type="text" class="form-control" id="username" name="username" value="{{ current_user.username }}" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Edit cocktail</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                 </form>
             </div>
         </div>
+{% endblock %}

@@ -173,18 +173,20 @@ def logout():
 
 @app.route("/change_username/<username>", methods=["GET", "POST"])
 def change_username(username):
-    user = User.query.get_or_404(username)
+    user = User.query.filter_by(username=username).first_or_404()
     
     if request.method == "POST":
-        user.username = request.form.get("username")
-        db.session.commit()
-        return redirect(url_for("/dashboard/<username>"))
+        new_username = request.form.get("username")
+        if new_username:
+            user.username = new_username
+            db.session.commit()
+            return redirect(url_for('dashboard', username=user.username))
     
     return render_template("edit_username.html", username=username)
 
-app.route('delete_account/<username>')
+@app.route('/delete_account/<username>')
 def delete_account(username):
-    user = User.query.get_or_404(username)
+    user = User.query.filter_by(username=username).first_or_404()
     db.session.delete(user)
     db.session.commit()
-    return redirect(url_for("/"))
+    return redirect(url_for('index'))
