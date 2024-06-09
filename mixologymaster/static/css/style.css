@@ -52,6 +52,10 @@ footer {
     color: #FAFAFA;
 }
 
+.capitalize {
+    text-transform: capitalize;
+}
+
 /*home page section*/
 
 #hero-image {
@@ -148,9 +152,24 @@ footer {
     height: 100vh;
     background: url("../images/contact-form-bg.jpg") center center / cover no-repeat fixed;
 
-}/* confirmation page*/
+}
+
+/* confirmation page*/
 
 #thank-you {
     padding: 2rem;
     margin: 0 auto;
+}
+
+/* view cocktail page*/
+
+.view-cocktail {
+    padding: 1.5rem;
+    background-color:#2E3944; 
+    max-width: 80%; 
+    margin: 2rem auto;
+}
+
+.card {
+    margin-bottom: 2rem;
 }

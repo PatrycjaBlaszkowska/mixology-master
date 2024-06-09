@@ -30,11 +30,13 @@
                 {% for cocktail in cocktails %}
                     {% if current_user.id == cocktail.user_id or current_user.is_admin %}
                         {% set has_cocktails = True %}
-                        <div class="col-md-6 mb-4">
-                            <div class="card bg-dark text-white h-100">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100" style="background-color:#2E3944;">
                                 <img src="../static/images/icon-cocktail.png" class="card-img-top" alt="cocktail icon">
                                 <div class="card-body">
-                                    <h5 class="card-title">{{ cocktail.cocktail_name }}</h5>
+                                    <h5 class="card-title">
+                                        <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="text-white">{{ cocktail.cocktail_name }}</a>
+                                    </h5>
                                     <p class="card-text"><strong>Category:</strong> {{ cocktail.cocktail_category }}</p>
                                     <p class="card-text">{{ cocktail.description }}</p>
                                     <div class="d-flex justify-content-between">

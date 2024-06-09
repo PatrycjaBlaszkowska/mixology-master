@@ -84,6 +84,12 @@ def delete_cocktail(cocktail_id):
     return redirect(url_for("specs"))
 
 
+@app.route('/cocktail/<int:cocktail_id>')
+def view_cocktail(cocktail_id):
+    cocktail = Cocktail.query.get_or_404(cocktail_id)
+    ingredients = cocktail.ingredients.split(',')
+    return render_template('view_cocktail.html', cocktail=cocktail, ingredients=ingredients)
+
 @app.route("/contact")
 def contact():
     #Render contact page
@@ -96,7 +102,7 @@ def confirmation():
     return render_template("confirmation.html")
 
 
-@ app.route('/register', methods=['GET', 'POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def register():
     # Takes user data and handle register/ validation process
 
@@ -160,8 +166,10 @@ def login():
 @app.route("/dashboard/<username>")
 @login_required
 def dashboard(username):
+    # Get cocktails for the current user
+    cocktails = Cocktail.query.filter_by(user_id=current_user.id).all()
     # Render user dashboard
-    return render_template("dashboard.html", username=username)
+    return render_template("dashboard.html", username=username, cocktails=cocktails)
 
 
 @app.route('/logout')

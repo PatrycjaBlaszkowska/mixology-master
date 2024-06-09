@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5"> 
+    <div class="card view-cocktail"> 
+        <img src="{{ url_for('static', filename='images/icon-cocktail.png') }}" class="card-img-top mx-auto mt-3" alt="cocktail icon" style="width: 30%;"> 
+        <div class="card-header text-center"> 
+            <h2 class="card-title">{{ cocktail.cocktail_name }}</h2> 
+        </div> <div class="card-body"> 
+            <p class="card-text">{{ cocktail.description }}</p> 
+            <hr class="my-2"> 
+            <h5 class="card-subtitle mb-2">Ingredients :</h5> 
+            <ul class="list-group mb-2"> {% for ingredient in ingredients %} 
+                <li class="list-group-item bg-secondary text-white capitalize" style="padding: 5px;"> {{ ingredient }}</li> 
+                {% endfor %} 
+            </ul> 
+            <hr class="my-2"> 
+            <h5 class="card-subtitle mb-2">Preparation Instructions :</h5> 
+            <p class="card-text">{{ cocktail.prep_instructions }}</p> 
+        </div> 
+    </div> 
+</div>
+{% endblock %}
+
+
