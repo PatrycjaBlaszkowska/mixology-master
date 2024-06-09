@@ -61,7 +61,7 @@ footer {
 #hero-image {
     height: 37.5rem;
     width: 100%;
-    background: url("../images/hero-img.jpeg") center bottom / cover no-repeat fixed;
+    background: url("../images/hero-img.jpg") center bottom / cover no-repeat fixed;
 }
 
 .btn-bg {
@@ -177,11 +177,9 @@ footer {
 
 /*media queries*/
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
     #hero-image {
-        height: 23rem;
-        width: 100%;
-        background: url("../images/hero-img-mobile1.jpeg") center center / cover no-repeat fixed;
+        background: url("../images/alexandra-golovac-kP8QyKwd1r0-unsplash.jpg") center center / cover no-repeat fixed; 
     }
     #devider {
         display: none;
