@@ -10,6 +10,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(60), unique=True, nullable=False)
     password = db.Column(db.String(200), nullable=False)
     is_admin = db.Column(db.Boolean, default=False)
+    cocktails = db.relationship('Cocktail', backref='user', lazy=True, cascade="all, delete-orphan")
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
@@ -26,6 +27,8 @@ class Cocktail(db.Model):
     prep_instructions = db.Column(db.String, nullable=False)
     description = db.Column(db.String, nullable=False)
 
+    def __repr__(self):
+        return f'<Cocktail {self.cocktail_name}>'
 
 class RegisterForm(FlaskForm):
     # username field and length validation
