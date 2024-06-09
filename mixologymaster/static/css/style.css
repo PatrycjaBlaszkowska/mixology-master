@@ -14,6 +14,31 @@ h1 {
     padding-bottom: 0.5rem;
 }
 
+footer {
+    margin: 0;
+    padding: 0;
+  }
+  
+.socials {
+    background-color: #2E3944;
+    font-weight: 700;
+    height: 5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove default list styling */
+}
+  
+.socials li {
+    padding-top: 1.25rem;
+    display: inline-block;
+}
+  
+.socials li a i {
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    color: #FAFAFA;
+}
+
 /*home page section*/
 
 #hero-image {
