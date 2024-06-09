@@ -58,8 +58,9 @@ footer {
 }
 
 #introduction a , #specs-link-section a { 
-    color: #2E3944;
     text-decoration: none; 
+    font-weight: 800;
+    color: #FAFAFA;
 }
 
 #introduction a:hover , #specs-link-section a:hover { 

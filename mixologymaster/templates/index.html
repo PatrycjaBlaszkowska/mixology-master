@@ -17,8 +17,11 @@
         <div>
             <p>Mixology Master is free to use platform.</p>
             <p>You can browser through recipes with no account!</p>
-            <p>If you wish to share your own recipe, please create free account <a href="{{ url_for('register') }}">here.</a></p>
+            <p>If you wish to share your own recipe, please create free account <a href="{{ url_for('register') }}">here!</a></p>
         </div>
+    </div>
+    <!-- Bartender set img-->
+    <div id="devider">
     </div>
 <!-- Info section-->
     <div id="info-section" class="text-center">
@@ -38,13 +41,9 @@
                 These tools can help you measure ingredients accurately, mix drinks properly, and strain out any unwanted particles.
             </p>
         </div>
-    </div>
-<!-- Bartender set img-->
-<div id="devider">
-</div>
-<!-- Section conecting home page and the specs page-->
-    <div id="specs-link-section" class="text-center">
-        <h4>Excited to join bartendering world? </h4>
-        <p>Check out our specs <a href="{{ url_for('specs') }}">here!</a></p>
+        <div id="specs-link-section" class="text-center">
+            <h4>Excited to join bartendering world? </h4>
+            <p>Check out our specs <a href="{{ url_for('specs') }}">here!</a></p>
+        </div>
     </div>
 {% endblock %}
