@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-3 mb-4">
+        <div class="col-md-3">
             <div class="card bg-dark text-white h-100">
                 <div class="card-body">
                     <h5 class="card-title">Account Management</h5>
@@ -13,7 +13,7 @@
         </div>
         <div class="col-md-9">
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h1 class="text-white">Hi {{ current_user.username }}</h1>
+                <h1>Hi {{ current_user.username }}</h1>
                 <a href="{{ url_for('add_cocktail') }}" class="btn btn-primary">Add New Cocktail Spec</a>
             </div>
             {% if current_user.is_admin %}
@@ -46,13 +46,15 @@
                         </div>
                     {% endif %}
                 {% endfor %}
-                {% if not has_cocktails and not current_user.is_admin %}
-                    <p class="text-white">Please add your first cocktail to see it here!</p>
-                {% elif not has_cocktails and current_user.is_admin %}
-                    <p>No cocktails to show!</p>
-                {% endif %}
             </div>
         </div>
     </div>
+</div>
+<div class="specs-info text-center">    
+    {% if not has_cocktails and not current_user.is_admin %}
+        <p>Please add your first cocktail to see it here!</p>
+    {% elif not has_cocktails and current_user.is_admin %}
+        <p>No cocktails to show!</p>
+    {% endif %}
 </div>
 {% endblock %}
