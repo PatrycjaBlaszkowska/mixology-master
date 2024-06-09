@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', serif;
     background-color: #748D92;
     color: #FAFAFA;
-    font-size: 16px; 
+    font-size: 1rem; 
     line-height: 1.5; 
 }
 
@@ -17,7 +17,7 @@ h1 {
 /*home page section*/
 
 #hero-image {
-    height: 600px;
+    height: 37.5rem;
     width: 100%;
     background: url("../images/hero-img.jpeg") center bottom / cover no-repeat fixed;
 }
@@ -42,14 +42,14 @@ h1 {
 }
 
 #devider {
-    height: 400px;
+    height: 25rem;
     width: 100%;
     background: url("../images/devider.jpg") center center / cover no-repeat fixed;
 }
 
 #specs-link-section {
     padding-top: 1rem;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 /*specs page*/
@@ -61,12 +61,43 @@ h1 {
 /*login and register pages*/
 
 .auth-form-background {
-    background: url("../images/olena-bohovyk-JjGLEN7T8xI-unsplash.jpg") center center / cover no-repeat fixed;
+    background: url("../images/register-and-login-bg.jpg") center top / cover no-repeat fixed;
     width: 100%;
     height: 100vh;
-    color: #2E3944;
 }
 
-.auth-form-background h1 {
-    color: #2E3944;
+/*contact us page*/
+
+ .contact-form{
+    color: #FFF;
+    max-width: 25rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 30px;
+}
+
+.contact-form label{
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.text-input {
+    color: #FAFAFA;
+    background: transparent;
+    width: 100%;
+    margin: 5px 0 20px 0;
+    border: 1px solid #FAFAFA;
+    border-radius: 2px;
+}
+
+.contact-form h1 {
+    margin-bottom: 1rem;
+}
+
+.contact-form-background {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/contact-form-bg.jpg") center center / cover no-repeat fixed;
+
 }

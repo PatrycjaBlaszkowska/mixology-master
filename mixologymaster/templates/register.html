@@ -2,27 +2,28 @@
 
 {% block content %}
 <div class="auth-form-background">
-  <h1>Register</h1>
-  <div class="container">
-      <div class="row justify-content-center">
-          <div class="col-md-6">
-              <form method="POST" action="{{ url_for('register') }}">
-                  {{ form.hidden_tag() }}
-                  <div class="form-group">
-                      <label for="username">Username</label>
-                      {{ form.username(class_="form-control") }}
-                  </div>
-                  <div class="form-group">
-                      <label for="password">Password</label>
-                      {{ form.password(class_="form-control") }}
-                  </div>
-                  <div class="form-group">
-                      {{ form.submit(class_="btn btn-primary") }}
-                  </div>
-              </form>
-              <a href="{{ url_for('login') }}">Already have an account? Log In!</a>
-          </div>
-      </div>
-  </div>
+    <h1>Register</h1>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="POST" action="{{ url_for('register') }}">
+                    {{ form.hidden_tag() }}
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        {{ form.username(class_="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        {{ form.password(class_="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.submit(class_="btn btn-primary") }}
+                    </div>
+                </form>
+                <a href="{{ url_for('login') }}">Already have an account? Log in!</a>
+            </div>
+        </div>
+    </div>
 </div>
+
 {% endblock %}
