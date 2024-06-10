@@ -179,9 +179,19 @@ footer {
 
 @media only screen and (max-width: 768px) {
     #hero-image {
-        background: url("../images/alexandra-golovac-kP8QyKwd1r0-unsplash.jpg") center center / cover no-repeat fixed; 
+        background: url("../images/hero-img-mobile.jpg") center center / cover no-repeat fixed; 
     }
     #devider {
         display: none;
     }
 }
+
+@media only screen and (min-width: 768px) {
+    #hero-image {
+        background: url("../images/hero-img.jpg") top center / cover no-repeat fixed;
+    }
+    #devider {
+        display: none;
+    }
+}
+
