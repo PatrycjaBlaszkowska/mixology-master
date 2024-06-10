@@ -61,7 +61,7 @@ footer {
 #hero-image {
     height: 37.5rem;
     width: 100%;
-    background: url("../images/hero-img.jpg") center bottom / cover no-repeat fixed;
+    background: url("../images/hero-img.jpg") center center / cover no-repeat;
 }
 
 .btn-bg {
@@ -87,7 +87,7 @@ footer {
 #devider {
     height: 25rem;
     width: 100%;
-    background: url("../images/devider.jpg") center center / cover no-repeat fixed;
+    background: url("../images/devider.jpg") center center / cover no-repeat;
 }
 
 #specs-link-section {
@@ -179,16 +179,17 @@ footer {
 
 @media only screen and (max-width: 768px) {
     #hero-image {
-        background: url("../images/hero-img-mobile.jpg") center center / cover no-repeat fixed; 
+        height: 35rem;
+        background: url("../images/hero-img-mobile.jpg") center center / cover no-repeat; 
     }
     #devider {
         display: none;
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 992px){
     #hero-image {
-        background: url("../images/hero-img.jpg") top center / cover no-repeat fixed;
+        background: url("../images/hero-img.jpg") top center / cover no-repeat;
     }
     #devider {
         display: none;
