@@ -104,7 +104,7 @@ footer {
 /*login and register pages*/
 
 .auth-form-background {
-    background: url("../images/register-and-login-bg.jpg") center top / cover no-repeat fixed;
+    background: url("../images/register-and-login-bg.jpg") center top / cover no-repeat;
     width: 100%;
     height: 100vh;
 }
@@ -116,6 +116,11 @@ footer {
     text-transform: uppercase;
     font-weight: 800;
     font-size: 2rem;
+}
+
+.manage-specs {
+    padding-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 /*contact us page*/
@@ -150,7 +155,7 @@ footer {
 .contact-form-background {
     width: 100%;
     height: 100vh;
-    background: url("../images/contact-form-bg.jpg") center center / cover no-repeat fixed;
+    background: url("../images/contact-form-bg.jpg") center center / cover no-repeat;
 
 }
 
@@ -172,6 +177,7 @@ footer {
 
 .card {
     margin-bottom: 2rem;
+    background-color:#2E3944;
 }
 
 
