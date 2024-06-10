@@ -55,16 +55,16 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- No Cocktails Message -->
+                        <div class="specs-info text-center">
+                        {% if not has_cocktails and not current_user.is_admin %}
+                            <p>Please add your first cocktail to see it here!</p>
+                        {% elif not has_cocktails and current_user.is_admin %}
+                            <p>No cocktails to show!</p>
+                        {% endif %}
+                        </div>
                     {% endif %}
                 {% endfor %}
-                <!-- No Cocktails Message -->
-                <div class="specs-info text-center">
-                    {% if not has_cocktails and not current_user.is_admin %}
-                        <p>Please add your first cocktail to see it here!</p>
-                    {% elif not has_cocktails and current_user.is_admin %}
-                        <p>No cocktails to show!</p>
-                    {% endif %}
-                </div>
             </div>
         </div>
     </div>
