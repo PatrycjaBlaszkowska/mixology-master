@@ -101,6 +101,10 @@ footer {
     text-transform: uppercase;
 }
 
+.search-bar {
+    margin-bottom: 2rem;
+}
+
 /*login and register pages*/
 
 .auth-form-background {
@@ -175,10 +179,11 @@ footer {
     margin: 2rem auto;
 }
 
-.card {
+.card, .cocktail-card {
     margin-bottom: 2rem;
     background-color:#2E3944;
 }
+
 
 
 /*media queries*/

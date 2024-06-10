@@ -1,7 +1,9 @@
 {% extends "base.html" %}
+
 {% block content %}
 <div class="container mt-5">
     <div class="row">
+        <!-- Account Management Sidebar -->
         <div class="col-md-3">
             <div class="card bg-dark">
                 <div class="card-body">
@@ -11,14 +13,17 @@
                 </div>
             </div>
         </div>
+        <!-- Main Content Area -->
         <div class="col-md-9">
+            <!-- Welcome Header and Action Buttons -->
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h1>Hi {{ current_user.username }}</h1>
                 <div>
                     <a href="{{ url_for('add_cocktail') }}" class="btn btn-primary btn-block">Add New Cocktail</a>
                     <a href="{{ url_for('static', filename='images/new-cocktail-guide.pdf') }}" class="btn btn-primary btn-block">Download Guide</a>
-                </div>    
+                </div>
             </div>
+            <!-- Manage Specs Section -->
             {% if current_user.is_admin %}
                 <div class="manage-specs">
                     <h4>Manage all specs here: </h4>
@@ -28,19 +33,20 @@
                     <h4>Manage your specs here: </h4>
                 </div>
             {% endif %}
+            <!-- Cocktails Listing -->
             <div class="row">
                 {% set has_cocktails = False %}
                 {% for cocktail in cocktails %}
                     {% if current_user.id == cocktail.user_id or current_user.is_admin %}
                         {% set has_cocktails = True %}
                         <div class="col-md-4 mb-4">
-                            <div class="card h-100">
+                            <div class="card">
                                 <img src="{{ url_for('static', filename='images/icon-cocktail.png') }}" class="card-img-top" alt="cocktail icon">
                                 <div class="card-body">
                                     <h5 class="card-title">
-                                        <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}">{{ cocktail.cocktail_name }}</a>
+                                        <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="cocktail-name text-white">{{ cocktail.cocktail_name }}</a>
                                     </h5>
-                                    <p class="card-text"><strong>Category:</strong> {{ cocktail.cocktail_category }}</p>
+                                    <p class="card-text cocktail-category"><strong>Category:</strong> {{ cocktail.cocktail_category }}</p>
                                     <p class="card-text">{{ cocktail.description }}</p>
                                     <div class="d-flex justify-content-between">
                                         <a href="{{ url_for('edit_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="btn btn-warning btn-sm">Edit</a>
@@ -49,15 +55,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="specs-info text-center">    
-                            {% if not has_cocktails and not current_user.is_admin %}
-                                <p>Please add your first cocktail to see it here!</p>
-                            {% elif not has_cocktails and current_user.is_admin %}
-                                <p>No cocktails to show!</p>
-                            {% endif %}
-                        </div>
                     {% endif %}
                 {% endfor %}
+                <!-- No Cocktails Message -->
+                <div class="specs-info text-center">
+                    {% if not has_cocktails and not current_user.is_admin %}
+                        <p>Please add your first cocktail to see it here!</p>
+                    {% elif not has_cocktails and current_user.is_admin %}
+                        <p>No cocktails to show!</p>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>

@@ -1,26 +1,42 @@
 {% extends "base.html" %}
+
 {% block content %}
 <div class="container mt-5">
+    <!-- Header and Add New Cocktail Button -->
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>Recipes Page</h1>
         <a href="{{ url_for('add_cocktail') }}" class="btn btn-primary">Add New Cocktail Spec</a>
     </div>
+    <!-- Search Bar -->
+    <div class="d-flex justify-content-center search-bar">
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+    <!-- No Results Message -->
+    <div>
+        <h4 class="text-danger mt-5 text-center" id="not-found" style="display: none;">No Results! Please try different phrase.</h4>
+    </div>
+    <!-- Cocktails Listing -->
     <div class="row">
         {% for cocktail in cocktails %}
         <div class="col-md-4 mb-4">
-            <div class="card">
+            <div class="card cocktail-card">
                 <img src="{{ url_for('static', filename='images/icon-cocktail.png') }}" class="card-img-top" alt="cocktail icon">
                 <div class="card-body">
                     <h5 class="card-title">
-                        <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}">{{ cocktail.cocktail_name }}</a>
+                        <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="text-white">{{ cocktail.cocktail_name }}</a>
                     </h5>
                     <p class="card-text"><strong>Category:</strong> {{ cocktail.cocktail_category }}</p>
                     <p class="card-text">{{ cocktail.description }}</p>
                     <div class="d-flex justify-content-between">
                         {% if current_user.id == cocktail.user_id %}
+                            <!-- Edit and Delete Buttons for Cocktail Owner -->
                             <a href="{{ url_for('edit_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="btn btn-warning btn-sm">Edit</a>
                             <a href="{{ url_for('delete_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="btn btn-danger btn-sm">Delete</a>
                         {% else %}
+                            <!-- Read Button for Other Users -->
                             <a href="#" class="btn btn-light btn-sm">Read</a>
                         {% endif %}
                     </div>
