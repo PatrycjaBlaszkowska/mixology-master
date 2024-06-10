@@ -26,9 +26,9 @@
                 <img src="{{ url_for('static', filename='images/icon-cocktail.png') }}" class="card-img-top" alt="cocktail icon">
                 <div class="card-body">
                     <h5 class="card-title">
-                        <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="text-white">{{ cocktail.cocktail_name }}</a>
+                        <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="cocktail-name text-white">{{ cocktail.cocktail_name }}</a>
                     </h5>
-                    <p class="card-text"><strong>Category:</strong> {{ cocktail.cocktail_category }}</p>
+                    <p class="card-text"><strong>Category:</strong> <span class="cocktail-category">{{ cocktail.cocktail_category }}</span></p>
                     <p class="card-text">{{ cocktail.description }}</p>
                     <div class="d-flex justify-content-between">
                         {% if current_user.id == cocktail.user_id %}
