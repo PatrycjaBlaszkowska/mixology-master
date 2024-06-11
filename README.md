@@ -85,3 +85,19 @@ enabling me to identify which ones could be completed within the given deadline 
 - Password retrieval.
 - Option for logged-in users to upload an image of the cocktail when submitting a recipe.
 - Ability to search for cocktails based on available ingredients.
+
+*Above decisions have been made based on below table.*
+
+| Feature       | Feasibility   | Importance    |
+| ------------- |:-------------:|:-------------:|
+|Navigation     | 5             | 5             |
+|Introduction   | 5             | 5             |
+|Verification   | 5             | 5             |
+|Recipes page   | 5             | 5             |
+|Social media   | 5             | 5             |
+|Dashboard      | 5             | 5             |
+|Contact page   | 4             | 5             |
+|Two-step auth  | 4             | 3             |
+|Password retr. | 4             | 4             |
+|Search bar     | 4             | 5             |
+|Ingrid search  | 3             | 4
