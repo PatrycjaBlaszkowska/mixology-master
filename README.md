@@ -15,3 +15,19 @@ Mixology Master is a free-to-use cocktail recipe platform. 
 The user can browse through available cocktail recipes without an account.
 The user can also add their own recipes after registering and logging into their account.
 All logged-in users can download a free guide on how to add their own recipe.
+
+### Thank you for visiting Mixology Master!
+
+## UXD – User Experience Design
+
+A user experience designer, Jesse James Garrett, introduced five UX design elements in his book The Elements of User Experience.
+In the book, he explains the steps of user experience projects and what UX designers should consider at each stage.
+This is where most of my planning process steps came from.
+
+The 5 planes of UX are as below:
+
+- The Strategy Plane
+- The Scope Plane
+- The Structure Plane
+- The Skeleton Plane
+- The Surface Plane
