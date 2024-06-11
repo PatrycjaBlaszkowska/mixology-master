@@ -31,3 +31,14 @@ The 5 planes of UX are as below:
 - The Structure Plane
 - The Skeleton Plane
 - The Surface Plane
+
+## The Strategy Plane
+
+### Creator Goals :
+
+- As a creator, I want webpage to be user-friendly.
+- As a creator, I want webpage to be fully responsive.
+- As a creator, I want webpage to be functional.
+- As a creator, I want webpage to be easy to navigate.
+- As a creator, I want the purpose of my webpage to be clear.
+- As a creator, I aim to foster repeat visits to my webpage from users.
