@@ -42,3 +42,22 @@ The 5 planes of UX are as below:
 - As a creator, I want webpage to be easy to navigate.
 - As a creator, I want the purpose of my webpage to be clear.
 - As a creator, I aim to foster repeat visits to my webpage from users.
+
+### User stories :
+
+**GUEST USER** :
+
+- As a guest user, I expect the webpage to be easy to navigate.
+- As a guest user, I expect the purpose of the website to be explained straight away.
+- As a guest user, I expect registration process to seamless and efficient.
+- As a guest user, I anticipate being able to easily browse through recipes without the need to create an account.
+
+**LOGGED USER**
+
+- As a logged user, I expect the webpage to be easy to navigate.
+- As a logged user, I expect login process to seamless and efficient.
+- As a logged user, I expect user dasboard to include all important information and functions.
+- As a logged user, I anticipate being able to add and manage my own recipes.
+- As a logged user, I anticipate being able to delete my account.
+
+**User stories are based on online research and my relatives experiance.**
