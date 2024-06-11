@@ -52,7 +52,7 @@ The 5 planes of UX are as below:
 - As a guest user, I expect the registration process to be seamless and efficient.
 - As a guest user, I anticipate being able to easily browse through recipes without the need to create an account.
 
-**LOGGED USER**
+**LOGGED-IN USER**
 
 - As a logged-in user, I expect the webpage to be easy to navigate.
 - As a logged-in user, I expect the login process to be seamless and efficient.
@@ -61,3 +61,27 @@ The 5 planes of UX are as below:
 - As a logged user, I anticipate being able to delete my account.
 
 **User stories are based on online research and my relatives experiance.**
+
+## The Scope Plane
+
+The planning process allowed me to prioritize the implementation of features based on their importance to my user stories, 
+enabling me to identify which ones could be completed within the given deadline and which ones would need to be postponed for later implementation.
+
+#### Features implemented upon webpage release :
+
+- Introduction on the homepage providing information on the art of bartending.
+- Page dedicated to recipes featuring all available recipes for users.
+- Verification system for users.
+- Ability for logged-in users to create and manage their own recipes.
+- User-friendly navigation bar for easy access to different pages.
+- Footer with links to social media platforms.
+- Contact form for users to communicate with the website owner/admin.
+- User dashboard for account management, recipe creation, and guide downloads.
+- Search bar functionality to help users browse through a variety of available recipes.
+
+#### Fatures planned to implement later :
+
+- Two-step authentication.
+- Password retrieval.
+- Option for logged-in users to upload an image of the cocktail when submitting a recipe.
+- Ability to search for cocktails based on available ingredients.
