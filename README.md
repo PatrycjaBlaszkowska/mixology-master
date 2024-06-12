@@ -100,4 +100,5 @@ enabling me to identify which ones could be completed within the given deadline 
 |Two-step auth  | 4             | 3             |
 |Password retr. | 4             | 4             |
 |Search bar     | 4             | 5             |
-|Ingrid search  | 3             | 4
+|Ingrid search  | 3             | 4             |
+
