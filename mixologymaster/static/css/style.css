@@ -1,4 +1,4 @@
-/*general css*/
+/*general css (including base.html css) */
 
 body {
     font-family: 'Roboto', serif;
@@ -22,6 +22,10 @@ h1 {
     text-align: center;
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
+}
+
+.navbar {
+    background-color: #2E3944;
 }
 
 footer {
@@ -135,7 +139,9 @@ footer {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    padding: 30px;
+    padding: 1.87rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 6rem;
 }
 
 .contact-form label{
@@ -179,7 +185,8 @@ footer {
     margin: 2rem auto;
 }
 
-.card, .cocktail-card, .specs-header {
+.card, .cocktail-card, 
+.specs-header {
     margin-bottom: 2rem;
     background-color:#2E3944;
 }
