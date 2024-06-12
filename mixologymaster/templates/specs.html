@@ -17,7 +17,7 @@
             <i class="fa-solid fa-filter"></i>
           </button>
           <div class="collapse d-md-block w-100" id="filterDropdown">
-            <form>
+            <form id="filterForm">
               <select class="form-control mb-2" id="categoryFilter">
                 <option value="">All Categories</option>
                 {% for category in categories %}
@@ -50,14 +50,14 @@
       </div>
     </div>
     <!-- Cocktails Listing -->
-    <div class="row">
+    <div class="row" id="cocktailList">
         {% for cocktail in cocktails %}
-        <div class="col-md-4 mb-4">
-            <div class="card cocktail-card h-100 shadow-sm border-0">
+        <div class="col-md-4 mb-4 cocktail-item" data-category="{{ cocktail.cocktail_category }}">
+            <div class="card cocktail-card shadow-sm border-0">
                 <img src="{{ url_for('static', filename='images/icon-cocktail.png') }}" class="card-img-top" alt="cocktail icon">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">
-                        <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="cocktail-name text-primary">{{ cocktail.cocktail_name }}</a>
+                        <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="cocktail-name text-white">{{ cocktail.cocktail_name }}</a>
                     </h5>
                     <p class="card-text"><strong>Category:</strong> <span class="cocktail-category">{{ cocktail.cocktail_category }}</span></p>
                     <p class="card-text">{{ cocktail.description }}</p>
