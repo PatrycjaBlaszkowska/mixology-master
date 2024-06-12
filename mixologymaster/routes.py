@@ -28,7 +28,9 @@ def index():
 def specs():
     #Render specs(recipes) page
     cocktails = list(Cocktail.query.order_by(Cocktail.cocktail_name).all())
-    return render_template("specs.html", cocktails=cocktails)
+    # Handles categories filter
+    categories = set([cocktail.cocktail_category for cocktail in cocktails])
+    return render_template("specs.html", cocktails=cocktails, categories=categories)
 
 @app.route("/add_cocktail", methods=['GET', 'POST'])
 @login_required

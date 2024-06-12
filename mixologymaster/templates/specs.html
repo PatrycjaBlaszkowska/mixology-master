@@ -18,10 +18,20 @@
     <div>
         <h4 class="text-danger mt-5 text-center" id="not-found" style="display: none;">No Results! Please try different phrase.</h4>
     </div>
+    <!-- Filter by Category Dropdown -->
+    <form class="form-inline my-2 my-lg-0">
+        <select class="form-control mr-2" id="categoryFilter">
+            <option value="">All Categories</option>
+            {% for category in categories %}
+                <option value="{{ category  }}">{{ category }}</option>
+            {% endfor %}
+        </select>
+        <button class="btn btn-primary my-2 my-sm-0" type="submit">Filter</button>
+    </form>
     <!-- Cocktails Listing -->
     <div class="row">
         {% for cocktail in cocktails %}
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4 mt-5">
             <div class="card cocktail-card">
                 <img src="{{ url_for('static', filename='images/icon-cocktail.png') }}" class="card-img-top" alt="cocktail icon">
                 <div class="card-body">

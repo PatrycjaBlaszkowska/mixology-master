@@ -52,6 +52,7 @@ def validate_username(self, username):
 
 
 class LoginForm(FlaskForm):
+    # Authenticate user through flask form
     username = StringField(validators=[
                            InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Username"})
 
