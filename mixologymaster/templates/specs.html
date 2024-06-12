@@ -68,7 +68,7 @@
                             <a href="{{ url_for('delete_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="btn btn-danger btn-sm">Delete</a>
                         {% else %}
                             <!-- Read Button for Other Users -->
-                            <a href="#" class="btn btn-light btn-sm">Read</a>
+                            <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="btn btn-light btn-sm">Read</a>
                         {% endif %}
                     </div>
                 </div>
