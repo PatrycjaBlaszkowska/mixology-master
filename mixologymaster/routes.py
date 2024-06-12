@@ -181,11 +181,15 @@ def login():
 @app.route("/dashboard/<username>")
 @login_required
 def dashboard(username):
-    # Get cocktails for the current user
-    cocktails = Cocktail.query.filter_by(user_id=current_user.id).all()
+    if current_user.is_admin:
+        # Admin 
+        cocktails = Cocktail.query.all()
+    else:
+        # Regular user 
+        cocktails = Cocktail.query.filter_by(user_id=current_user.id).all()
+    
     # Render user dashboard
     return render_template("dashboard.html", username=username, cocktails=cocktails)
-
 
 @app.route('/logout')
 def logout():

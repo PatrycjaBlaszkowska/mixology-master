@@ -37,7 +37,7 @@
             <div class="row">
                 {% set has_cocktails = False %}
                 {% for cocktail in cocktails %}
-                    {% if current_user.id == cocktail.user_id or current_user.is_admin %}
+                    {% if current_user.is_admin or current_user.id == cocktail.user_id %}
                         {% set has_cocktails = True %}
                         <div class="col-md-4 mb-4">
                             <div class="card">
