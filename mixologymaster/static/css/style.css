@@ -179,7 +179,7 @@ footer {
     margin: 2rem auto;
 }
 
-.card, .cocktail-card {
+.card, .cocktail-card, .specs-header {
     margin-bottom: 2rem;
     background-color:#2E3944;
 }
