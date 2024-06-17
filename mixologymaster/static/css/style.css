@@ -61,6 +61,13 @@ footer {
     text-transform: capitalize;
 }
 
+.custom-btn {
+    color: #FAFAFA;
+    background-color: #748D92;
+    
+
+}
+
 /*home page section*/
 
 #hero-image {
