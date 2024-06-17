@@ -7,25 +7,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Filter cocktails based on search input
     searchInput.addEventListener("input", function() {
-        const searchValue = this.value.trim().toLowerCase();
-        filterCocktails(searchValue, categoryFilter.value.toLowerCase());
+        filterCocktails();
     });
 
     // Filter cocktails based on selected category
     filterForm.addEventListener("submit", function(e) {
         e.preventDefault();
-        filterCocktails(searchInput.value.trim().toLowerCase(), categoryFilter.value.toLowerCase());
+        filterCocktails();
     });
 
-    function filterCocktails(searchValue, selectedCategory) {
+    function filterBySearch(cocktail, searchValue) {
+        const cocktailName = cocktail.querySelector(".cocktail-name").textContent.trim().toLowerCase();
+        return cocktailName.includes(searchValue);
+    }
+
+    function filterByCategory(cocktail, selectedCategory) {
+        const cocktailCategory = cocktail.getAttribute("data-category").toLowerCase();
+        return selectedCategory === "" || cocktailCategory === selectedCategory;
+    }
+
+    function filterCocktails() {
+        const searchValue = searchInput.value.trim().toLowerCase();
+        const selectedCategory = categoryFilter.value.toLowerCase();
         let hasResults = false;
 
         cocktails.forEach(function(card) {
-            const cocktailName = card.querySelector(".cocktail-name").textContent.trim().toLowerCase();
-            const cocktailCategory = card.getAttribute("data-category").toLowerCase();
-
-            const matchesSearch = cocktailName.includes(searchValue);
-            const matchesCategory = selectedCategory === "" || cocktailCategory === selectedCategory;
+            const matchesSearch = filterBySearch(card, searchValue);
+            const matchesCategory = filterByCategory(card, selectedCategory);
 
             if (matchesSearch && matchesCategory) {
                 card.style.display = "block";
