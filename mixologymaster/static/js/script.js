@@ -5,16 +5,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const cocktails = document.querySelectorAll(".cocktail-item");
     const notFound = document.getElementById("not-found");
 
-    // Filter cocktails based on search input
-    searchInput.addEventListener("input", function() {
-        filterCocktails();
-    });
 
-    // Filter cocktails based on selected category
-    filterForm.addEventListener("submit", function(e) {
-        e.preventDefault();
-        filterCocktails();
+    // Filter cocktails based on search input
+    if (searchInput) {
+        searchInput.addEventListener("input", function() {
+            filterCocktails();
     });
+    } 
+    
+    // Filter cocktails based on selected category
+    if (filterForm) {
+        filterForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            filterCocktails();
+        });
+    }
 
     function filterBySearch(cocktail, searchValue) {
         const cocktailName = cocktail.querySelector(".cocktail-name").textContent.trim().toLowerCase();
