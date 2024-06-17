@@ -6,17 +6,9 @@ body {
     color: #FAFAFA;
     font-size: 1rem; 
     line-height: 1.5;
-    min-height: 100vh;
-    margin: 0;
-    position: relative; 
+
 }
 
-body::after {
-    content: '';
-    display: block;
-    height: 5rem;
-}
-  
 h1 {
     color: #FAFAFA;
     text-align: center;
@@ -31,10 +23,8 @@ h1 {
 footer {
     margin: 0;
     padding: 0;
-    height: 5rem;
+    height: 4rem;
     background-color: #2E3944;
-    position: absolute;
-    bottom: 0;
     width: 100%;
   }
   
@@ -112,9 +102,15 @@ footer {
 /*login and register pages*/
 
 .auth-form-background {
-    background: url("../images/register-and-login-bg.jpg") center top / cover no-repeat;
+    background: url("../images/register-and-login-bg.jpg") center center / cover no-repeat;
     width: 100%;
-    height: 100vh;
+    height: 80rem;
+}
+
+.account-links {
+    color: #FAFAFA;
+    font-size: 1.1rem;
+    text-transform: uppercase;
 }
 
 /*dashboard*/
@@ -133,7 +129,7 @@ footer {
 
 /*contact us page*/
 
- .contact-form{
+.contact-form{
     color: #FFF;
     max-width: 25rem;
     position: absolute;
@@ -141,7 +137,7 @@ footer {
     transform: translate(-50%, 0);
     padding: 1.87rem;
     background-color: rgba(0, 0, 0, 0.3);
-    margin-top: 6rem;
+    margin-top: 7rem;
 }
 
 .contact-form label{
@@ -164,7 +160,7 @@ footer {
 
 .contact-form-background {
     width: 100%;
-    height: 100vh;
+    height: 80rem;
     background: url("../images/contact-form-bg.jpg") center center / cover no-repeat;
 
 }
@@ -195,6 +191,12 @@ footer {
 
 /*media queries*/
 
+@media only screen and (max-width: 600px){
+    .contact-form-background, .auth-form-background {
+        height: 52rem;
+    } 
+}
+
 @media only screen and (max-width: 768px) {
     #hero-image {
         height: 35rem;
@@ -202,6 +204,10 @@ footer {
     }
     #devider {
         display: none;
+    }
+    .contact-form {
+        margin: 5rem auto;
+        width: 90%;
     }
 }
 
