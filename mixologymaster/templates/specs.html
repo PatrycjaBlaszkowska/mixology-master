@@ -60,7 +60,7 @@
                         <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="cocktail-name text-white">{{ cocktail.cocktail_name }}</a>
                     </h5>
                     <p class="card-text"><strong>Category:</strong> <span class="cocktail-category">{{ cocktail.cocktail_category }}</span></p>
-                    <p class="card-text">{{ cocktail.description }}</p>
+                    <p class="card-text cocktail-description">{{ cocktail.description }}</p>
                     <div class="mt-auto d-flex justify-content-between">
                         {% if current_user.id == cocktail.user_id %}
                             <!-- Edit and Delete Buttons for Cocktail Owner -->

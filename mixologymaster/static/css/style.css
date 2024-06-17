@@ -145,6 +145,11 @@ footer {
     text-transform: uppercase;
 }
 
+.cocktail-description {
+    height: 8rem;
+    overflow-x: auto;
+}
+
 /*contact us page*/
 
 .contact-form{
