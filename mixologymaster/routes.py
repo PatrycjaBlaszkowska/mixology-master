@@ -60,6 +60,7 @@ def add_cocktail():
         # Adds and commits cocktail to the database
         db.session.add(new_cocktail)
         db.session.commit()
+        flash('Cocktail added successfully', 'success')
         return redirect(url_for('specs'))
     
     return render_template("add_cocktail.html")
@@ -89,6 +90,7 @@ def delete_cocktail(cocktail_id):
     cocktail = Cocktail.query.get_or_404(cocktail_id)
     db.session.delete(cocktail)
     db.session.commit()
+    flash('Cocktail deleted successfully', 'success')
     return redirect(url_for("specs"))
 
 
@@ -229,4 +231,5 @@ def delete_account(username):
     user = User.query.filter_by(username=username).first_or_404()
     db.session.delete(user)
     db.session.commit()
+    flash('Account deleted successfully', 'success')
     return redirect(url_for('index'))

@@ -72,6 +72,10 @@ footer {
     color: black;
 }
 
+.alert {
+    margin-top: 1rem;
+}
+
 /*home page section*/
 
 #hero-image {
