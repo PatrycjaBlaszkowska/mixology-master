@@ -233,3 +233,13 @@ def delete_account(username):
     db.session.commit()
     flash('Account deleted successfully', 'success')
     return redirect(url_for('index'))
+
+
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('404.html', error=error), 404
+
+
+@app.errorhandler(500)
+def not_found(error):
+    return render_template('500.html', error=error), 500

@@ -8,7 +8,7 @@
             <div class="card bg-dark">
                 <div class="card-body">
                     <h5 class="card-title">Account Management</h5>
-                    <a href="{{ url_for('change_username', username=current_user.username) }}" class="btn btn-primary btn-block mb-2">Change Username</a>
+                    <a href="{{ url_for('change_username', username=current_user.username) }}" class="btn btn-secondary btn-block mb-2">Change Username</a>
                     <a href="{{ url_for('delete_account', username=current_user.username) }}" class="btn btn-danger btn-block" data-toggle="modal" data-target="#delete-modal" data-item-id="{{ current_user.username }}" data-item-type="account">Delete Account</a>
                 </div>
             </div>
@@ -19,8 +19,8 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h1>Hi {{ current_user.username }}</h1>
                 <div>
-                    <a href="{{ url_for('add_cocktail') }}" class="btn btn-primary btn-block">Add New Cocktail</a>
-                    <a href="{{ url_for('static', filename='images/new-cocktail-guide.pdf') }}" class="btn btn-primary btn-block">Download Guide</a>
+                    <a href="{{ url_for('add_cocktail') }}" class="btn btn-secondary btn-block">Add New Cocktail</a>
+                    <a href="{{ url_for('static', filename='images/new-cocktail-guide.pdf') }}" class="btn btn-secondary btn-block">Download Guide</a>
                 </div>
             </div>
             <!-- Manage Specs Section -->
