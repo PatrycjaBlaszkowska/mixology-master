@@ -1,3 +1,6 @@
+/**
+ * Function handles search bar and filter functionality.
+ */
 document.addEventListener("DOMContentLoaded", function() {
     const searchInput = document.getElementById("search");
     const filterForm = document.getElementById("filterForm");
@@ -50,4 +53,37 @@ document.addEventListener("DOMContentLoaded", function() {
 
         notFound.style.display = hasResults ? "none" : "block";
     }
+});
+
+/**
+ * Function handles delete "warning" modal 
+ */
+$(document).ready(function() {
+    $('#delete-modal').on('show.bs.modal', function (event) {
+        const button = $(event.relatedTarget); // Button that triggered the modal
+        const itemId = button.data('item-id'); // Extract info from data-* attributes
+        const itemType = button.data('item-type');
+        const modal = $(this);
+        
+        // Update the modal's content
+        modal.find('#item-type').text(itemType);
+        
+        // Set the delete button's data attributes
+        $('#confirm-delete-btn').data('item-id', itemId);
+        $('#confirm-delete-btn').data('item-type', itemType);
+    });
+
+    $('#confirm-delete-btn').click(function() {
+        const itemId = $(this).data('item-id');
+        const itemType = $(this).data('item-type');
+        let deleteUrl;
+
+        if (itemType === 'cocktail') {
+            deleteUrl = '/delete_cocktail/' + itemId;
+        } else if (itemType === 'account') {
+            deleteUrl = '/delete_account/' + itemId;
+        }
+
+        window.location.href = deleteUrl;
+    });
 });
