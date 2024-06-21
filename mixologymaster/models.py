@@ -10,7 +10,6 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(60), unique=True, nullable=False)
     password = db.Column(db.String(200), nullable=False)
     is_admin = db.Column(db.Boolean, default=False)
-    cocktails = db.relationship('Cocktail', backref='user', lazy=True, cascade="all, delete-orphan")
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
@@ -22,7 +21,7 @@ class Cocktail(db.Model):
     cocktail_id = db.Column(db.Integer, primary_key=True)
     cocktail_name = db.Column(db.String, nullable=False, unique=True)
     cocktail_category = db.Column(db.String, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id", ondelete="CASCADE"))
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id", ondelete="SET NULL"), nullable=True)
     ingredients = db.Column(db.String, nullable=False)
     prep_instructions = db.Column(db.String, nullable=False)
     description = db.Column(db.String, nullable=False)
