@@ -34,8 +34,8 @@
                 </div>
             {% endif %}
             <!-- Cocktails Listing -->
+            {% set has_cocktails = False %}
             <div class="row">
-                {% set has_cocktails = False %}
                 {% for cocktail in cocktails %}
                     {% if current_user.is_admin or current_user.id == cocktail.user_id %}
                         {% set has_cocktails = True %}
@@ -55,41 +55,40 @@
                                 </div>
                             </div>
                         </div>
+                    {% else %}
+                        <div class="specs-info text-center w-100">
+                            {% if current_user.is_admin %}
+                                <p>No cocktails to show!</p>
+                            {% else %}
+                                <p>Please add your first cocktail to see it here!</p>
+                            {% endif %}
+                        </div>
                     {% endif %}
                 {% endfor %}
-                <!-- No Cocktails Message -->
-                <div class="specs-info text-center w-100">
-                    {% if not has_cocktails %}
-                        {% if current_user.is_admin %}
-                            <p>No cocktails to show!</p>
-                        {% else %}
-                            <p>Please add your first cocktail to see it here!</p>
-                        {% endif %}
-                    {% endif %}
-                </div>
             </div>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="delete-modal" tabindex="-1" aria-labelledby="delete-modal" aria-hidden="true">
             <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">WARNING</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">WARNING</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you wish to delete this <span id="item-type"></span>?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" id="confirm-delete-btn">Delete</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                <p>Are you sure you wish to delete this <span id="item-type"></span>?</p>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-danger" id="confirm-delete-btn">Delete</button>
-                </div>
-            </div>
             </div>
         </div>
     </div>
 </div>
 {% endblock %}
+
 
