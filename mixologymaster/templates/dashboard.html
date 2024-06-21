@@ -8,7 +8,7 @@
             <div class="card bg-dark">
                 <div class="card-body">
                     <h5 class="card-title">Account Management</h5>
-                    <a href="{{ url_for('change_username', username=current_user.username) }}" class="btn btn-secondary btn-block mb-2">Change Username</a>
+                    <a href="{{ url_for('change_username', username=current_user.username) }}" class="btn btn-warning btn-block mb-2">Change Username</a>
                     <a href="{{ url_for('delete_account', username=current_user.username) }}" class="btn btn-danger btn-block" data-toggle="modal" data-target="#delete-modal" data-item-id="{{ current_user.username }}" data-item-type="account">Delete Account</a>
                 </div>
             </div>
