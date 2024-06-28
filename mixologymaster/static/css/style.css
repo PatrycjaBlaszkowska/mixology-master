@@ -69,7 +69,7 @@ footer {
 }
 
 .modal {
-    color: black;
+    color: #000;
 }
 
 .alert {
@@ -161,7 +161,6 @@ footer {
 /*contact us page*/
 
 .contact-form{
-    color: #FFF;
     max-width: 25rem;
     position: absolute;
     left: 50%;

@@ -102,3 +102,75 @@ enabling me to identify which ones could be completed within the given deadline 
 |Search bar     | 4             | 5             |
 |Ingrid search  | 3             | 4             |
 
+## The Structure Plane
+
+### Colors :
+
+#748D92 :
+
+- Body background
+- Buttons
+
+![#748D92 Hex Color](./docs/images/748d92.PNG)
+
+#FAFAFA :
+
+- Text 
+- Footer icons
+- Links
+- Buttons 
+- User input (form)
+
+![#FAFAFA Hex Color](./docs/images/fafafa.PNG)
+
+#2E3944 :
+
+- Navigation bar (background)
+- Footer (background)
+- Cocktail and user card (background) 
+- View cocktail page (background)
+- Specs page header (background)
+
+![#2E3944 Hex Color](./docs/images/2e3944.PNG)
+
+#000 :
+
+- Delete modal (text) 
+- Info section (background with opacity of 0.3)
+- Contact form (background with opacity of 0.3)
+
+![#000 Hex Color](./docs/images/000.PNG)
+
+**Bootstrap default buttons colors** :
+
+- #F8F9FA 
+
+![#F8F9FA Hex Color](./docs/images/f8f9fa.PNG)
+
+- #FFC107
+
+![#FFC107 Hex Color](./docs/images/ffc107.PNG)
+
+- #DC3545 :
+
+![#DC3545 Hex Color](./docs/images/dc3545.PNG)
+
+- #6C757D :
+
+![#6C757D Hex Color](./docs/images/6c757d.PNG)
+
+
+### Fonts :
+
+**Roboto** :
+
+- The choice of utilizing the Roboto font from Google as the primary typeface was made due to its widespread popularity and user-friendly characteristics. With a focus on readability across various screen sizes, Roboto ensures an optimal user experience for all individuals accessing the content.
+
+### Images :
+
+Images for this project has been downloaded from : 
+
+- [Gestational Diabates](https://www.gestationaldiabetes.co.uk)
+- [Unsplash](https://unsplash.com/)
+
+**More information in credits section.**
