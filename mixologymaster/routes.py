@@ -6,12 +6,16 @@ from .models import Cocktail
 from .models import RegisterForm
 from .models import LoginForm
 from . import bcrypt
-from flask_login import LoginManager, current_user, login_user, login_required, logout_user
+from flask_login import (
+    LoginManager, current_user, login_user, login_required, logout_user)
 
 
 login_manager = LoginManager()
 login_manager.init_app(app)
-login_manager.login_view = 'login' # Ensure redirection to login page if not authenticated
+
+# Ensure redirection to login page if not authenticated
+login_manager.login_view = 'login'
+
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -21,18 +25,20 @@ def load_user(user_id):
 @app.route("/")
 def index():
     # Render index(home) page as landing page
-    return render_template("index.html")
+    return render_template('index.html')
 
 
-@app.route("/specs")
+@app.route('/specs')
 def specs():
-    #Render specs(recipes) page
+    # Render specs(recipes) page
     cocktails = list(Cocktail.query.order_by(Cocktail.cocktail_name).all())
     # Handles categories filter
     categories = set([cocktail.cocktail_category for cocktail in cocktails])
-    return render_template("specs.html", cocktails=cocktails, categories=categories)
+    return render_template(
+        'specs.html', cocktails=cocktails, categories=categories)
 
-@app.route("/add_cocktail", methods=['GET', 'POST'])
+
+@app.route('/add_cocktail', methods=['GET', 'POST'])
 @login_required
 def add_cocktail():
     # Push user input into database
@@ -42,13 +48,19 @@ def add_cocktail():
         ingredients = request.form['ingredients']
         prep_instructions = request.form['prep_instructions']
         user_id = current_user.id
-        description = request.form.get('description') 
+        description = request.form.get('description')
 
         # Ensure all required fields are filled
-        if not all([cocktail_name, cocktail_category, ingredients, prep_instructions]):
-            return "All fields are required", 400
+        if not all([
+            cocktail_name,
+            cocktail_category,
+            ingredients,
+            prep_instructions
+        ]):
+            return 'All fields are required', 400
 
-        # Combine all key-value pairs into one object instance in order to add it to database
+        # Combine all key-value pairs into one object instance
+        # in order to add it to database
         new_cocktail = Cocktail(
             cocktail_name=cocktail_name,
             cocktail_category=cocktail_category,
@@ -62,36 +74,37 @@ def add_cocktail():
         db.session.commit()
         flash('Cocktail added successfully', 'success')
         return redirect(url_for('specs'))
-    
-    return render_template("add_cocktail.html")
 
-@app.route("/edit_cocktail/<int:cocktail_id>", methods=["GET", "POST"])
+    return render_template('add_cocktail.html')
+
+
+@app.route('/edit_cocktail/<int:cocktail_id>', methods=['GET', 'POST'])
 def edit_cocktail(cocktail_id):
     cocktail = Cocktail.query.get_or_404(cocktail_id)
-    
+
     # Gets new user input and alter existing columns in the database
-    if request.method == "POST":
-        cocktail.cocktail_name = request.form.get("cocktail_name")
-        cocktail.category = request.form.get("category")
-        cocktail.description = request.form.get("description")
-        cocktail.ingredients = request.form.get("ingredients")
-        cocktail.prep_instructions = request.form.get("prep_instructions")
+    if request.method == 'POST':
+        cocktail.cocktail_name = request.form.get('cocktail_name')
+        cocktail.category = request.form.get('category')
+        cocktail.description = request.form.get('description')
+        cocktail.ingredients = request.form.get('ingredients')
+        cocktail.prep_instructions = request.form.get('prep_instructions')
 
         # Commit changes to the database
         db.session.commit()
         return redirect(url_for("specs"))
-    
-    return render_template("edit_cocktail.html", cocktail=cocktail)
+
+    return render_template('edit_cocktail.html', cocktail=cocktail)
 
 
-@app.route("/delete_cocktail/<int:cocktail_id>")
+@app.route('/delete_cocktail/<int:cocktail_id>')
 def delete_cocktail(cocktail_id):
     # Deletes cocktail out of database
     cocktail = Cocktail.query.get_or_404(cocktail_id)
     db.session.delete(cocktail)
     db.session.commit()
     flash('Cocktail deleted successfully', 'success')
-    return redirect(url_for("specs"))
+    return redirect(url_for('specs'))
 
 
 @app.route('/cocktail/<int:cocktail_id>')
@@ -99,18 +112,21 @@ def view_cocktail(cocktail_id):
     # Renders a separate cocktail dedicated page.
     cocktail = Cocktail.query.get_or_404(cocktail_id)
     ingredients = cocktail.ingredients.split(',')
-    return render_template('view_cocktail.html', cocktail=cocktail, ingredients=ingredients)
+    return render_template(
+        'view_cocktail.html', cocktail=cocktail, ingredients=ingredients
+    )
 
-@app.route("/contact")
+
+@app.route('/contact')
 def contact():
-    #Render contact page
-     return render_template("contact.html")
+    # Render contact page
+    return render_template('contact.html')
 
 
-@app.route("/confirmation")
+@app.route('/confirmation')
 def confirmation():
-    #Render thank you page
-    return render_template("confirmation.html")
+    # Render thank you page
+    return render_template('confirmation.html')
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -119,20 +135,25 @@ def register():
 
     form = RegisterForm()
 
-    if request.method == 'GET': 
+    if request.method == 'GET':
         return render_template("register.html", form=form)
-    elif request.method ==  'POST':
+    elif request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
 
-        hashed_password = bcrypt.generate_password_hash(password).decode('utf8')
+        hashed_password = bcrypt.generate_password_hash(password) \
+            .decode('utf8')
 
         user = User(username=username, password=hashed_password)
 
         # Check if username already exists
         existing_user = User.query.filter_by(username=username).first()
         if existing_user:
-            flash('Username already taken. Please choose a different one.', 'danger')
+            flash(
+                'Username already taken. Please choose a different one.',
+                'danger'
+            )
+
             return redirect(url_for('register'))
 
         db.session.add(user)
@@ -161,18 +182,20 @@ def login():
             return redirect(url_for('login'))
 
         # Console output to help test login process during development
-        print(f"User found: {user.username}")
+        print(f'User found: {user.username}')
 
-        # Generate output in the console necessary for debugging or a message for a user if login details are invalid
+        # Generate output in the console necessary for debugging
+        # or a message for a user if login details are invalid
+
         if bcrypt.check_password_hash(user.password, password):
             login_user(user)
-            print(f"Login successful for user: {user.username}")
-            
+            print(f'Login successful for user: {user.username}')
+
             # Redirect user to the dashboard after sucessfull login
             return redirect(url_for('dashboard', username=user.username))
         else:
             flash('Invalid username or password. Please try again.', 'danger')
-            print(f"Login failed for user: {username}")
+            print(f'Login failed for user: {username}')
 
             # Return user back to login page if authentication fails
             return redirect(url_for('login'))
@@ -184,14 +207,17 @@ def login():
 @login_required
 def dashboard(username):
     if current_user.is_admin:
-        # Admin 
+        # Admin
         cocktails = Cocktail.query.all()
     else:
-        # Regular user 
+        # Regular user
         cocktails = Cocktail.query.filter_by(user_id=current_user.id).all()
-    
+
     # Render user dashboard
-    return render_template("dashboard.html", username=username, cocktails=cocktails)
+    return render_template(
+        "dashboard.html", username=username, cocktails=cocktails
+    )
+
 
 @app.route('/logout')
 def logout():
@@ -200,29 +226,33 @@ def logout():
     return redirect(url_for('index'))
 
 
-@app.route('/change_username/<username>', methods=["GET", "POST"])
+@app.route('/change_username/<username>', methods=['GET', 'POST'])
 def change_username(username):
     # Fetch user data from database
     user = User.query.filter_by(username=username).first_or_404()
-    
+
     # Takes user input from the form
-    if request.method == "POST":
-        new_username = request.form.get("username")
+    if request.method == 'POST':
+        new_username = request.form.get('username')
 
         # check if username is already in use
         if new_username:
             existing_user = User.query.filter_by(username=new_username).first()
             if existing_user:
                 # Generate a message to let user know username can't be changed
-                flash('Username already taken. Please choose a different one.', 'danger')
+                flash(
+                    'Username already taken. Please choose a different one.',
+                    'danger'
+                )
+
                 return redirect(url_for('change_username', username=username))
             user.username = new_username
             db.session.commit()
             #  Generate a message to let user know username has been changed
             flash('Username updated successfully', 'success')
             return redirect(url_for('dashboard', username=user.username))
-    
-    return render_template("edit_username.html", username=username)
+
+    return render_template('edit_username.html', username=username)
 
 
 @app.route('/delete_account/<username>')
