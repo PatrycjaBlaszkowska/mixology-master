@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     } 
     
-    // Filter cocktails based on selected category
+    // Filter cocktails based on selected category or search
     if (filterForm) {
         filterForm.addEventListener("submit", function(e) {
             e.preventDefault();
@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
+        // Gives user a feedback if there's no results
         notFound.style.display = hasResults ? "none" : "block";
     }
 });
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 /**
  * Function handles delete "warning" modal 
  */
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function()  {
     $('#delete-modal').on('show.bs.modal', function (event) {
         const button = $(event.relatedTarget); // Button that triggered the modal
         const itemId = button.data('item-id'); // Extract info from data-* attributes
@@ -72,7 +73,7 @@ $(document).ready(function() {
         $('#confirm-delete-btn').data('item-id', itemId);
         $('#confirm-delete-btn').data('item-type', itemType);
     });
-
+    // deletes the cocktail/account and it's url
     $('#confirm-delete-btn').click(function() {
         const itemId = $(this).data('item-id');
         const itemType = $(this).data('item-type');

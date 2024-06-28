@@ -2,7 +2,7 @@ import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
-from mixologymaster import routes
+
 
 if os.path.exists("env.py"):
     import env
@@ -21,3 +21,5 @@ else:
 
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
+
+from mixologymaster import routes
