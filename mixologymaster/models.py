@@ -4,6 +4,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
 
+
 class User(db.Model, UserMixin):
     # schema for the User model
     id = db.Column(db.Integer, primary_key=True)
@@ -21,7 +22,10 @@ class Cocktail(db.Model):
     cocktail_id = db.Column(db.Integer, primary_key=True)
     cocktail_name = db.Column(db.String, nullable=False, unique=True)
     cocktail_category = db.Column(db.String, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id", ondelete="SET NULL"), nullable=True)
+    user_id = db.Column(
+        db.Integer,
+        db.ForeignKey("user.id", ondelete="SET NULL"),
+        nullable=True)
     ingredients = db.Column(db.String, nullable=False)
     prep_instructions = db.Column(db.String, nullable=False)
     description = db.Column(db.String, nullable=False)
@@ -29,14 +33,27 @@ class Cocktail(db.Model):
     def __repr__(self):
         return f'<Cocktail {self.cocktail_name}>'
 
+
 class RegisterForm(FlaskForm):
     # username field and length validation
-    username = StringField(validators=[
-        InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Username"})
+    username = StringField(
+        validators=[
+            InputRequired(),
+            Length(min=4, max=20)
+        ],
+        render_kw={"placeholder": "Username"}
+    )
+
     # password field and length validation
-    password = PasswordField(validators=[
-        InputRequired(), Length(min=8, max=20)], render_kw={"placeholder": "Password"})
-    #submit field
+    password = PasswordField(
+        validators=[
+            InputRequired(),
+            Length(min=8, max=20)
+        ],
+        render_kw={"placeholder": "Password"}
+    )
+
+    # submit field
     submit = SubmitField('Register')
 
 
@@ -52,10 +69,20 @@ def validate_username(self, username):
 
 class LoginForm(FlaskForm):
     # Authenticate user through flask form
-    username = StringField(validators=[
-                           InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Username"})
+    username = StringField(
+        validators=[
+            InputRequired(),
+            Length(min=4, max=20)
+        ],
+        render_kw={"placeholder": "Username"}
+    )
 
-    password = PasswordField(validators=[
-                             InputRequired(), Length(min=8, max=20)], render_kw={"placeholder": "Password"})
+    password = PasswordField(
+        validators=[
+            InputRequired(),
+            Length(min=8, max=20)
+        ],
+        render_kw={"placeholder": "Password"}
+    )
 
     submit = SubmitField('Login')
