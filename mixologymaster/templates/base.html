@@ -30,10 +30,17 @@
           </li>
         </ul>
         <ul class="navbar-nav">
-          {% if current_user.is_authenticated %}
+          {% if current_user.is_authenticated and not current_user.is_admin %}
             <li class="nav-item">
               <div class="d-flex flex-column flex-md-row">
                 <a class="btn btn-outline-light mb-2 mb-md-0" href="{{ url_for('dashboard', username=current_user.username) }}">Dashboard</a>
+                <a class="btn btn-outline-light ml-0 ml-md-2" href="{{ url_for('logout') }}">Logout</a>
+              </div>
+            </li>
+          {% elif current_user.is_admin %}
+            <li class="nav-item">
+              <div class="d-flex flex-column flex-md-row">
+                <a class="btn btn-outline-light mb-2 mb-md-0" href="{{ url_for('admin_panel') }}">Admin Panel</a>
                 <a class="btn btn-outline-light ml-0 ml-md-2" href="{{ url_for('logout') }}">Logout</a>
               </div>
             </li>

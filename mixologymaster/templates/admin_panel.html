@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <!-- Main Content Area -->
+        <div class="col-md-9">
+            <!-- Welcome Header and Action Buttons -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1>Hi Admin!</h1>
+                <div>
+                    <a href="{{ url_for('add_cocktail') }}" class="btn btn-secondary btn-block">Add New Cocktail</a>
+                    <a href="{{ url_for('static', filename='images/new-cocktail-guide.pdf') }}" class="btn btn-secondary btn-block">Download Guide</a>
+                </div>
+            </div>
+            <!-- Manage Specs Section -->
+            <div class="manage-specs">
+                <h4>Manage all specs here: </h4>
+            </div>
+            <!-- Cocktails Listing -->
+            {% if not cocktails %}
+                <div class="specs-info text-center w-100">
+                    <p>No cocktails to show!</p>
+                </div>
+            {% else %}
+                <div class="row">
+                    {% for cocktail in cocktails %}
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/icon-cocktail.png') }}" class="card-img-top" alt="cocktail icon">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="cocktail-name text-white">{{ cocktail.cocktail_name }}</a>
+                                    </h5>
+                                    <p class="card-text cocktail-category"><strong>Category:</strong> {{ cocktail.cocktail_category }}</p>
+                                    <p class="card-text cocktail-description">{{ cocktail.description }}</p>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="{{ url_for('edit_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                        <a href="{{ url_for('delete_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete-modal" data-item-id="{{ cocktail.cocktail_id }}" data-item-type="cocktail">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="delete-modal" tabindex="-1" aria-labelledby="delete-modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">WARNING</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you wish to delete this {{ item_type }}?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" id="confirm-delete-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

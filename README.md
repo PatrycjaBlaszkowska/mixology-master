@@ -172,5 +172,6 @@ Images for this project has been downloaded from :
 
 - [Gestational Diabates](https://www.gestationaldiabetes.co.uk)
 - [Unsplash](https://unsplash.com/)
+- [Pinterest](https://www.pinterest.co.uk/)
 
 **More information in credits section.**

@@ -22,7 +22,7 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-@app.route("/")
+@app.route('/')
 def index():
     # Render index(home) page as landing page
     return render_template('index.html')
@@ -41,7 +41,7 @@ def specs():
 @app.route('/add_cocktail', methods=['GET', 'POST'])
 @login_required
 def add_cocktail():
-    # Push user input into database
+    # Push user's input into database
     if request.method == 'POST':
         cocktail_name = request.form['cocktail_name']
         cocktail_category = request.form['cocktail_category']
@@ -190,9 +190,12 @@ def login():
         if bcrypt.check_password_hash(user.password, password):
             login_user(user)
             print(f'Login successful for user: {user.username}')
-
-            # Redirect user to the dashboard after sucessfull login
-            return redirect(url_for('dashboard', username=user.username))
+            if current_user.is_admin:
+                # Redirect admin to the admin panel after sucessfull login
+                return redirect(url_for('admin_panel'))
+            else:    
+                # Redirect user to the dashboard after sucessfull login
+                return redirect(url_for('dashboard', username=user.username))
         else:
             flash('Invalid username or password. Please try again.', 'danger')
             print(f'Login failed for user: {username}')
@@ -203,21 +206,25 @@ def login():
     return 'Failed'  # Fallback response
 
 
-@app.route("/dashboard/<username>")
+@app.route('/dashboard/<username>')
 @login_required
 def dashboard(username):
-    if current_user.is_admin:
-        # Admin
-        cocktails = Cocktail.query.all()
-    else:
-        # Regular user
-        cocktails = Cocktail.query.filter_by(user_id=current_user.id).all()
-
-    # Render user dashboard
+    # Regular user's cocktails
+    cocktails = Cocktail.query.filter_by(user_id=current_user.id).all()
+    # Render user's dashboard
     return render_template(
-        "dashboard.html", username=username, cocktails=cocktails
+        'dashboard.html', username=username, cocktails=cocktails
     )
 
+
+@app.route('/admin_panel')
+def admin_panel():
+    # Render all cocktails
+    cocktails = Cocktail.query.all()
+    # Render admin panel
+    return render_template(
+        'admin_panel.html', cocktails=cocktails
+    )
 
 @app.route('/logout')
 def logout():
