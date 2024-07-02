@@ -59,6 +59,12 @@ def add_cocktail():
         ]):
             return 'All fields are required', 400
 
+        # Check if cocktail name already exists
+        existing_cocktail = Cocktail.query.filter_by(cocktail_name=cocktail_name).first()
+        if existing_cocktail:
+            flash('Cocktail with this name already exists.', 'danger')
+            return redirect(url_for('add_cocktail'))
+
         # Combine all key-value pairs into one object instance
         # in order to add it to database
         new_cocktail = Cocktail(
@@ -82,16 +88,31 @@ def add_cocktail():
 def edit_cocktail(cocktail_id):
     cocktail = Cocktail.query.get_or_404(cocktail_id)
 
-    # Gets new user input and alter existing columns in the database
+    # Gets new user input and alters existing columns in the database
     if request.method == 'POST':
-        cocktail.cocktail_name = request.form.get('cocktail_name')
-        cocktail.category = request.form.get('category')
-        cocktail.description = request.form.get('description')
-        cocktail.ingredients = request.form.get('ingredients')
-        cocktail.prep_instructions = request.form.get('prep_instructions')
+        new_cocktail_name = request.form.get('cocktail_name')
+        category = request.form.get('category')
+        description = request.form.get('description')
+        ingredients = request.form.get('ingredients')
+        prep_instructions = request.form.get('prep_instructions')
+
+        # Check if cocktail name already exists and 
+        # is not the current cocktail
+        existing_cocktail = Cocktail.query.filter_by(cocktail_name=new_cocktail_name).first()
+        if existing_cocktail and existing_cocktail.cocktail_id != cocktail_id:
+            flash('Cocktail with this name already exists.', 'danger')
+            return redirect(url_for('edit_cocktail', cocktail_id=cocktail_id))
+
+        # Update cocktail fields
+        cocktail.cocktail_name = new_cocktail_name
+        cocktail.category = category
+        cocktail.description = description
+        cocktail.ingredients = ingredients
+        cocktail.prep_instructions = prep_instructions
 
         # Commit changes to the database
         db.session.commit()
+        flash('Cocktail updated successfully.', 'success')
         return redirect(url_for("specs"))
 
     return render_template('edit_cocktail.html', cocktail=cocktail)
