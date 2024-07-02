@@ -160,6 +160,7 @@ footer {
 
 .card-header {
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .border-bottom {
