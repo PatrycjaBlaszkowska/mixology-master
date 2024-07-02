@@ -6,9 +6,13 @@
         <!-- Account Management Sidebar -->
         <div class="col-md-3">
             <div class="card bg-dark">
-                <img src="{{ url_for('static', filename='images/icon-user.png') }}" class="card-img-top" alt="user icon">
+                <!-- Heading for Account Management -->
+                <div class="card-header border-bottom text-center">
+                    <h4>Account Management</h4>
+                </div>
+                <img src="{{ url_for('static', filename='images/icon-user.png') }}" class="card-img-top border-bottom" alt="user icon">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Account Management</h5>
+                    <h5 class="text-center">{{current_user.username}}</h5>
                     <a href="{{ url_for('change_username', username=current_user.username) }}" class="btn btn-warning btn-block mb-2">Change Username</a>
                     <a href="{{ url_for('delete_account', username=current_user.username) }}" class="btn btn-danger btn-block" data-toggle="modal" data-target="#delete-modal" data-item-id="{{ current_user.username }}" data-item-type="account">Delete Account</a>
                 </div>

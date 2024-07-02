@@ -158,6 +158,14 @@ footer {
     overflow-x: auto;
 }
 
+.card-header {
+    text-transform: uppercase;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #FAFAFA;
+}
+
 /*contact us page*/
 
 .contact-form{
