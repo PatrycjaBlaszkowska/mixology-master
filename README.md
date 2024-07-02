@@ -205,8 +205,12 @@ With this new section, users can now update their username, which provides an op
 
 **Unplanned Feature Addition: Account Management**
 
-- During the development process, I introduced an unforeseen feature addition to the platform: the Account Management section on the user's dashboard. This section allows users to update their username and delete their account, providing an opportunity for them to personalize their identity on the platform. This change was not part of the original plan, and therefore, I did not create wireframes for this page.
+- During the development process, I introduced an unforeseen feature addition to the platform: the Account Management section on the user's dashboard. This section allows users to update their username and delete their account, providing an opportunity for them to personalize their identity on the platform. In order to change the user's name, the page is being redirected to the new HTML page. This change was not part of the original plan, and therefore, I did not create wireframes for this page.
+
+![Account Management section on user's dashboard](/docs/images/account-management.PNG)
 
 **New User Interface: Dashboard and Admin Panel**
 
 - In addition to the Account Management section, I also made significant changes to the user's dashboard and introduced an admin panel. The user's dashboard has been split into two separate sections: the user's new account management section and a "My Recipes" section, which displays a list of recipes they have added to the platform. The admin panel, on the other hand, allows administrators to manage all added recipes, including creating, editing, and deleting recipes. Due to these changes, we did not create wireframes for these pages as they were not part of the original design plan.
+
+![Admin panel - new page](/docs/images/admin-panel.PNG)
