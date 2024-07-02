@@ -175,3 +175,38 @@ Images for this project has been downloaded from :
 - [Pinterest](https://www.pinterest.co.uk/)
 
 **More information in credits section.**
+
+## The Skeleton Plane
+
+As part of an ongoing effort to continually improve the project, I identified a number of key features that were previously missing, which were negatively impacting the overall user experience. In order to address this, I implemented several significant changes to the project, aimed at enhancing usability and functionality.
+
+**SIGIFICANT CHANGES ACROSS ALL WIREFRAMES** :
+- In an effort to improve the overall user experience and simplify the layout of the page, I have made the decision to relocate the login and register buttons from their previous position below the navbar to the navbar itself.This change was motivated by feedback that the original placement was causing the page to appear cluttered and overwhelming. By integrating these buttons into the navbar, we can streamline the design and provide a more intuitive and user-friendly interface.
+With this change, users will now have easy access to login and registration functionality directly from the main navigation bar, without having to scroll down to a separate section. This update aims to enhance the overall usability and aesthetic appeal of the page, making it more appealing to users.
+
+- Once a user logs in, the "Login" and "Register" buttons in the navbar are replaced with "Dashboard" and "Logout" buttons. This change aims to provide a more personalized and streamlined experience for authenticated users. By providing a direct link to the dashboard, users can quickly access their personalized content and features without having to navigate through the application. Additionally, the "Logout" button offers a convenient way for users to sign out of their account when they are finished using the application.
+This update enhances the overall user experience by providing a more intuitive and contextual navigation menu that adapts to the user's login state.
+
+[Recipes Page wireframes](./docs/wireframes/recipes-page.pdf)
+
+- To enhance the discoverability of webpage's extensive cocktail collection, I have added a cocktail category filter to the recipes page. This feature allows users to browse our selection of cocktails by their preferred alcohol type. By filtering by category, users can quickly find cocktails that match their taste preferences and interests.
+- I also optimized the layout of webpage's cocktail display to provide a more streamlined and visually appealing experience. To achieve this, we have reduced the number of cocktails displayed in each row from 4 to 3. This change allows for a more balanced and harmonious layout, making it easier for users to focus on the featured cocktails and their descriptions. With this update, users can enjoy a more enjoyable browsing experience and discover new favorite cocktails with ease.
+- I have made an enhancement to the action buttons for cocktails that users have created and added to their recipe book. For logged-in users who have created a cocktail, the "Read" button will now be replaced with "Edit" and "Delete" buttons. From the Recipes page, users can now click on the "Edit" button to make changes to their cocktail recipe, such as updating the ingredients, instructions, name etc. Additionally, the "Delete" button allows users to remove their cocktail from the page. This change provides users with greater control over their creations and makes it easier to manage their recipes.
+**This feature is available for logged-in users who have added a particular cocktail to their recipe book.**
+
+[Dashboard Page wireframes](./docs/wireframes/dashboard-page.pdf)
+
+- I optimized the layout of webpage's cocktail display to provide a more streamlined and visually appealing experience. To achieve this, we have reduced the number of cocktails displayed in each row from 4 to 3. This change allows for a more balanced and harmonious layout, making it easier for users to focus on the featured cocktails and their descriptions. With this update, users can enjoy a more enjoyable browsing experience and discover new favorite cocktails with ease.
+
+- I decided to introduce a new Account Management section. This feature allows users to take control of their account settings and customize their experience on Mixology Master.
+With this new section, users can now update their username, which provides an opportunity to personalize their identity on our platform. Additionally, I have added the ability to delete an account, giving users more control over their online presence and allowing them to easily remove their information from the database.
+
+### ADDITIONAL PAGES :
+
+**Unplanned Feature Addition: Account Management**
+
+- During the development process, I introduced an unforeseen feature addition to the platform: the Account Management section on the user's dashboard. This section allows users to update their username and delete their account, providing an opportunity for them to personalize their identity on the platform. This change was not part of the original plan, and therefore, I did not create wireframes for this page.
+
+**New User Interface: Dashboard and Admin Panel**
+
+- In addition to the Account Management section, I also made significant changes to the user's dashboard and introduced an admin panel. The user's dashboard has been split into two separate sections: the user's new account management section and a "My Recipes" section, which displays a list of recipes they have added to the platform. The admin panel, on the other hand, allows administrators to manage all added recipes, including creating, editing, and deleting recipes. Due to these changes, we did not create wireframes for these pages as they were not part of the original design plan.

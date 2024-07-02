@@ -91,7 +91,7 @@ def edit_cocktail(cocktail_id):
     # Gets new user input and alters existing columns in the database
     if request.method == 'POST':
         new_cocktail_name = request.form.get('cocktail_name')
-        category = request.form.get('category')
+        cocktail_category = request.form.get('cocktail_category')
         description = request.form.get('description')
         ingredients = request.form.get('ingredients')
         prep_instructions = request.form.get('prep_instructions')
@@ -105,7 +105,7 @@ def edit_cocktail(cocktail_id):
 
         # Update cocktail fields
         cocktail.cocktail_name = new_cocktail_name
-        cocktail.category = category
+        cocktail. cocktail_category =  cocktail_category
         cocktail.description = description
         cocktail.ingredients = ingredients
         cocktail.prep_instructions = prep_instructions
