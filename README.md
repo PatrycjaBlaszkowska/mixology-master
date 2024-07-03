@@ -221,11 +221,52 @@ With this new section, users can now update their username, which provides an op
 
 ### Navigation bar :
 
+The navigation bar is a persistent feature on every page and has been designed to be fully responsive, ensuring an optimal user experience across all devices and resolutions. On mobile devices, the navigation bar automatically transitions to a hamburger menu, providing easy access to all additional pages and sections. This intuitive design enables users to navigate the site with ease, regardless of their device or screen size.
+
 **Desktop** :
 
-![Navbar - desktop view]()
+![Navbar - desktop view](/docs/images/navbar-desktop.png)
 
 **Mobile** :
 
-![Navbar - mobile view]()
+![Navbar - mobile view(hamburger)](/docs/images/navbar-mobile-hamburger.png)
 
+![Navbar - mobile view](/docs/images/navbar-mobile.png)
+
+### Footer :
+
+The footer is a consistently present element on every page, featuring a comprehensive design that is fully responsive and adaptable to all devices and screen resolutions. Additionally, the footer includes a section dedicated to social media links, which open in a new tab when clicked, allowing users to seamlessly engage with the organization's online presence without disrupting their navigation experience.
+
+![Footer - mobile & desktop view](/docs/images/footer.png)
+
+### Hero image :
+
+The hero image is strategically featured on the home page to immediately capture the user's attention and effectively communicate the purpose of the website. To ensure an optimal user experience, the hero image is designed to be responsive, seamlessly adapting to different screen sizes and devices. This means that users viewing the website on desktop computers will see a distinct hero image, while mobile device users will be presented with a tailored version that is optimized for their smaller screen size and mobile-specific navigation needs
+
+**Desktop** :
+
+![Hero image - desktop view](/docs/images/hero-img-desktop.png)
+
+**Mobile** :
+
+![Hero image - mobile view](/docs/images/hero-img-mobile.png)
+
+
+### Introduction section :
+
+The introduction section of the website is designed to quickly convey the purpose and essence of the platform, allowing users to assess whether it is suitable for their interests within a brief timeframe. Following this initial section, a visually appealing divider image featuring a selection of fresh and tasty cocktails is prominently displayed. However, in consideration of mobile device users, this image is strategically hidden from view to prevent clutter and ensure an unobstructed user experience on smaller screens, ensuring that the content remains easily accessible and readable
+
+![Introduction section](/docs/images/introduction-section.png)
+
+### Information section :
+
+The "What's a Cocktail Spec?" and "Is a Bartender Kit Needed?" sections of this website provide valuable information for users looking to explore the world of cocktail-making. The "What's a Cocktail Spec?" section explains the concept of a cocktail specification, which is a detailed and precise recipe that includes the exact measurements of each ingredient, specific type and brand of alcohol or mixer, preparation method, and any garnishes or finishing touches. The "Is a Bartender Kit Needed?" section addresses the importance of having a basic bartender kit, which typically includes essential tools such as a shaker, jigger, strainer, muddler, and bar spoon. This information aims to educate users on the importance of accuracy and efficiency in cocktail preparation, and provides guidance on how to get started with their own bartending journey.
+
+![Information section](/docs/images/information-section.png)
+
+
+### Recipes Page - header :
+
+The Recipes page header section provides an overview of the purpose of this page, which is to showcase a curated collection of cocktail specifications (specs) for users to explore and create their own unique drinks. For logged-in users, this section also includes a feature to add their own cocktail spec, allowing them to contribute to the community and share their creations with others. This feature enables users to upload their own recipe, complete with measurements, ingredients, and preparation methods, making it easy to share and discover new cocktails with like-minded enthusiasts.
+
+![Recipes page header](/docs/images/recipes-page-header.png)

@@ -113,7 +113,7 @@ def edit_cocktail(cocktail_id):
 
         # Update cocktail fields
         cocktail.cocktail_name = new_cocktail_name
-        cocktail.cocktail_category =  cocktail_category
+        cocktail.cocktail_category = cocktail_category
         cocktail.description = description
         cocktail.ingredients = ingredients
         cocktail.prep_instructions = prep_instructions
@@ -222,7 +222,7 @@ def login():
             if current_user.is_admin:
                 # Redirect admin to the admin panel after sucessfull login
                 return redirect(url_for('admin_panel'))
-            else:    
+            else:
                 # Redirect user to the dashboard after sucessfull login
                 return redirect(url_for('dashboard', username=user.username))
         else:
@@ -254,6 +254,7 @@ def admin_panel():
     return render_template(
         'admin_panel.html', cocktails=cocktails
     )
+
 
 @app.route('/logout')
 def logout():
