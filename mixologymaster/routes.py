@@ -60,7 +60,11 @@ def add_cocktail():
             return 'All fields are required', 400
 
         # Check if cocktail name already exists
-        existing_cocktail = Cocktail.query.filter_by(cocktail_name=cocktail_name).first()
+        existing_cocktail = (
+            Cocktail.query
+            .filter_by(cocktail_name=cocktail_name)
+            .first()
+        )
         if existing_cocktail:
             flash('Cocktail with this name already exists.', 'danger')
             return redirect(url_for('add_cocktail'))
@@ -96,16 +100,20 @@ def edit_cocktail(cocktail_id):
         ingredients = request.form.get('ingredients')
         prep_instructions = request.form.get('prep_instructions')
 
-        # Check if cocktail name already exists and 
+        # Check if cocktail name already exists and
         # is not the current cocktail
-        existing_cocktail = Cocktail.query.filter_by(cocktail_name=new_cocktail_name).first()
+        existing_cocktail = (
+            Cocktail.query
+            .filter_by(cocktail_name=cocktail_name)
+            .first()
+        )
         if existing_cocktail and existing_cocktail.cocktail_id != cocktail_id:
             flash('Cocktail with this name already exists.', 'danger')
             return redirect(url_for('edit_cocktail', cocktail_id=cocktail_id))
 
         # Update cocktail fields
         cocktail.cocktail_name = new_cocktail_name
-        cocktail. cocktail_category =  cocktail_category
+        cocktail.cocktail_category =  cocktail_category
         cocktail.description = description
         cocktail.ingredients = ingredients
         cocktail.prep_instructions = prep_instructions

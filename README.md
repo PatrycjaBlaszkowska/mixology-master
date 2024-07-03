@@ -214,3 +214,18 @@ With this new section, users can now update their username, which provides an op
 - In addition to the Account Management section, I also made significant changes to the user's dashboard and introduced an admin panel. The user's dashboard has been split into two separate sections: the user's new account management section and a "My Recipes" section, which displays a list of recipes they have added to the platform. The admin panel, on the other hand, allows administrators to manage all added recipes, including creating, editing, and deleting recipes. Due to these changes, we did not create wireframes for these pages as they were not part of the original design plan.
 
 ![Admin panel - new page](/docs/images/admin-panel.PNG)
+
+## The Surface Plane
+
+### Features present across the project :
+
+### Navigation bar :
+
+**Desktop** :
+
+![Navbar - desktop view]()
+
+**Mobile** :
+
+![Navbar - mobile view]()
+
