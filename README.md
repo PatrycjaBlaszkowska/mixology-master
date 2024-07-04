@@ -280,3 +280,28 @@ The "Alcohol Type Filter" and "Search Bar" features enable users to quickly and 
 **Mobile** :
 
 ![Filter and Search - mobile view](/docs/images/filter-and-search-mobile.png)
+
+
+### Cocktails section :
+
+The cocktails section displays a collection of cocktail recipes, each presented in a visually appealing card format. The cards feature a cocktail icon, the drink's name, category, and description, as well as a brief summary of its ingredients and characteristics. Each card is linked to a detailed view of the cocktail, where users can learn more about its ingredients, preparation instructions, and other details. This section allows users to browse through a variety of cocktails and discover new recipes to try.
+
+![Cocktails section](/docs/images/cocktails-section.png)
+
+### Contact us section :
+
+This contact us form is designed to provide a convenient way for users to get in touch with admin. The form allows users to submit their name, email address and message.
+
+![Contact us section](/docs/images/contact-us.PNG)
+
+### Register section :
+
+The register page allows users to create a personal account, giving them access to a secure area where they can manage their own cocktail recipes. Upon registration, users can choose a unique username and password, which will serve as their credentials for logging in to the platform.
+
+![Register section](/docs/images/register.PNG)
+
+### Login section :
+
+The login page allows users to log into their personal account, giving them access to the user dashboard. By logging in users can take ownership of their cocktail creations and enjoy a more personalized experience on the platform.
+
+![Login section](/docs/images/login.PNG)
