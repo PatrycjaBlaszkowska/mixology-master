@@ -62,14 +62,7 @@
                     <p class="card-text"><strong>Category:</strong> <span class="cocktail-category">{{ cocktail.cocktail_category }}</span></p>
                     <p class="card-text cocktail-description">{{ cocktail.description }}</p>
                     <div class="mt-auto d-flex justify-content-between">
-                        {% if current_user.id == cocktail.user_id or current_user.is_admin %}
-                            <!-- Edit and Delete Buttons for Cocktail Owner -->
-                            <a href="{{ url_for('edit_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="{{ url_for('delete_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete-modal" data-item-id="{{ cocktail.cocktail_id }}" data-item-type="cocktail">Delete</a>
-                        {% else %}
-                            <!-- Read Button for Other Users -->
-                            <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="btn btn-light btn-sm">Read</a>
-                        {% endif %}
+                      <a href="{{ url_for('view_cocktail', cocktail_id=cocktail.cocktail_id) }}" class="btn btn-light btn-sm">Read</a>
                     </div>
                 </div>
             </div>

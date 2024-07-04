@@ -191,8 +191,6 @@ This update enhances the overall user experience by providing a more intuitive a
 
 - To enhance the discoverability of webpage's extensive cocktail collection, I have added a cocktail category filter to the recipes page. This feature allows users to browse our selection of cocktails by their preferred alcohol type. By filtering by category, users can quickly find cocktails that match their taste preferences and interests.
 - I also optimized the layout of webpage's cocktail display to provide a more streamlined and visually appealing experience. To achieve this, we have reduced the number of cocktails displayed in each row from 4 to 3. This change allows for a more balanced and harmonious layout, making it easier for users to focus on the featured cocktails and their descriptions. With this update, users can enjoy a more enjoyable browsing experience and discover new favorite cocktails with ease.
-- I have made an enhancement to the action buttons for cocktails that users have created and added to their recipe book. For logged-in users who have created a cocktail, the "Read" button will now be replaced with "Edit" and "Delete" buttons. From the Recipes page, users can now click on the "Edit" button to make changes to their cocktail recipe, such as updating the ingredients, instructions, name etc. Additionally, the "Delete" button allows users to remove their cocktail from the page. This change provides users with greater control over their creations and makes it easier to manage their recipes.
-**This feature is available for logged-in users who have added a particular cocktail to their recipe book.**
 
 [Dashboard Page wireframes](./docs/wireframes/dashboard-page.pdf)
 
@@ -270,3 +268,15 @@ The "What's a Cocktail Spec?" and "Is a Bartender Kit Needed?" sections of this 
 The Recipes page header section provides an overview of the purpose of this page, which is to showcase a curated collection of cocktail specifications (specs) for users to explore and create their own unique drinks. For logged-in users, this section also includes a feature to add their own cocktail spec, allowing them to contribute to the community and share their creations with others. This feature enables users to upload their own recipe, complete with measurements, ingredients, and preparation methods, making it easy to share and discover new cocktails with like-minded enthusiasts.
 
 ![Recipes page header](/docs/images/recipes-page-header.png)
+
+### Filter and Search bar :
+
+The "Alcohol Type Filter" and "Search Bar" features enable users to quickly and easily discover the perfect cocktail recipe. The "Alcohol Type Filter" allows users to narrow down their search by selecting from a range of spirits, such as gin, whiskey, rum, or vodka, to find cocktails that feature their preferred base spirit. The "Search Bar" enables users to search for cocktails by name. By combining these two features, users can rapidly locate and explore a vast array of cocktail recipes, making it easy to find the perfect drink to suit their taste preferences. On mobile devices, the "Alcohol Type Filter" toggles to the icon for easy access, allowing users to quickly switch between different spirit options without having to navigate through multiple menus.
+
+**Desktop** :
+
+![Filter and Search - desktop view](/docs/images/filter-and-search-desktop.png)
+
+**Mobile** :
+
+![Filter and Search - mobile view](/docs/images/filter-and-search-mobile.png)
