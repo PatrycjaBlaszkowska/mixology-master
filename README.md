@@ -346,3 +346,21 @@ The 'Edit Cocktail' page is where users can refine and customise their cocktail 
 The admin panel allows administrators to manage all added recipes, including creating, editing, and deleting recipes.
 
 ![Admin panel](/docs/images/admin-panel.PNG)
+
+
+## Technologies used :
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
+- [Jest](https://jestjs.io/)
+- [jQuery](https://jquery.com/)
+- [Gitpod](https://www.gitpod.io/)
+- [Github](https://github.com/)
+- [Git](https://git-scm.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [FontAwsome](https://fontawesome.com/)
+- [Balsamiq](https://balsamiq.com/wireframes/?gad_source=1&gclid=Cj0KCQiAy9msBhD0ARIsANbk0A_UrgDIhg_KSUHNCOUn-D9DiHl_9Z1dwScGRuI4JET1bnKbQkqwSb8aArFqEALw_wcB)
+- [Google Fonts](https://fonts.google.com/)
+- [QuillBot](https://quillbot.com/)
+- [Google Developer Tools](https://developer.chrome.com/docs/devtools/)
