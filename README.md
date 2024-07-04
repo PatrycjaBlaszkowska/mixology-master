@@ -164,7 +164,7 @@ enabling me to identify which ones could be completed within the given deadline 
 
 **Roboto** :
 
-- The choice of utilizing the Roboto font from Google as the primary typeface was made due to its widespread popularity and user-friendly characteristics. With a focus on readability across various screen sizes, Roboto ensures an optimal user experience for all individuals accessing the content.
+- The choice of utilising the Roboto font from Google as the primary typeface was made due to its widespread popularity and user-friendly characteristics. With a focus on readability across various screen sizes, Roboto ensures an optimal user experience for all individuals accessing the content.
 
 ### Images :
 
@@ -178,32 +178,31 @@ Images for this project has been downloaded from :
 
 ## The Skeleton Plane
 
-As part of an ongoing effort to continually improve the project, I identified a number of key features that were previously missing, which were negatively impacting the overall user experience. In order to address this, I implemented several significant changes to the project, aimed at enhancing usability and functionality.
+As part of an ongoing effort to continually improve the project, I identified a number of key features that were previously missing and were negatively impacting the overall user experience. In order to address this, I implemented several significant changes to the project, aimed at enhancing usability and functionality.
 
 **SIGIFICANT CHANGES ACROSS ALL WIREFRAMES** :
 - In an effort to improve the overall user experience and simplify the layout of the page, I have made the decision to relocate the login and register buttons from their previous position below the navbar to the navbar itself.This change was motivated by feedback that the original placement was causing the page to appear cluttered and overwhelming. By integrating these buttons into the navbar, we can streamline the design and provide a more intuitive and user-friendly interface.
-With this change, users will now have easy access to login and registration functionality directly from the main navigation bar, without having to scroll down to a separate section. This update aims to enhance the overall usability and aesthetic appeal of the page, making it more appealing to users.
+With this change, users will now have easy access to login and registration functionality directly from the main navigation bar without having to scroll down to a separate section. This update aims to enhance the overall usability and aesthetic appeal of the page, making it more appealing to users.
 
-- Once a user logs in, the "Login" and "Register" buttons in the navbar are replaced with "Dashboard" and "Logout" buttons. This change aims to provide a more personalized and streamlined experience for authenticated users. By providing a direct link to the dashboard, users can quickly access their personalized content and features without having to navigate through the application. Additionally, the "Logout" button offers a convenient way for users to sign out of their account when they are finished using the application.
-This update enhances the overall user experience by providing a more intuitive and contextual navigation menu that adapts to the user's login state.
+- Once a user logs in, the "Login" and "Register" buttons in the navbar are replaced with the "Dashboard" and "Logout" buttons. This change aims to provide a more personalised and streamlined experience for authenticated users. By providing a direct link to the dashboard, users can quickly access their personalised content and features without having to navigate through the application. Additionally, the "Logout" button offers a convenient way for users to sign out of their account when they are finished using the application. This update enhances the overall user experience by providing a more intuitive and contextual navigation menu that adapts to the user's login state.
 
 [Recipes Page wireframes](./docs/wireframes/recipes-page.pdf)
 
-- To enhance the discoverability of webpage's extensive cocktail collection, I have added a cocktail category filter to the recipes page. This feature allows users to browse our selection of cocktails by their preferred alcohol type. By filtering by category, users can quickly find cocktails that match their taste preferences and interests.
-- I also optimized the layout of webpage's cocktail display to provide a more streamlined and visually appealing experience. To achieve this, we have reduced the number of cocktails displayed in each row from 4 to 3. This change allows for a more balanced and harmonious layout, making it easier for users to focus on the featured cocktails and their descriptions. With this update, users can enjoy a more enjoyable browsing experience and discover new favorite cocktails with ease.
+- To enhance the discoverability of the webpage's extensive cocktail collection, I have added a cocktail category filter to the recipes page. This feature allows users to browse our selection of cocktails by their preferred alcohol type. By filtering by category, users can quickly find cocktails that match their taste preferences and interests.
+I also optimised the layout of the webpage's cocktail display to provide a more streamlined and visually appealing experience. To achieve this, we have reduced the number of cocktails displayed in each row from 4 to 3. This change allows for a more balanced and harmonious layout, making it easier for users to focus on the featured cocktails and their descriptions. With this update, users can enjoy a more enjoyable browsing experience and discover new favourite cocktails with ease.
 
 [Dashboard Page wireframes](./docs/wireframes/dashboard-page.pdf)
 
-- I optimized the layout of webpage's cocktail display to provide a more streamlined and visually appealing experience. To achieve this, we have reduced the number of cocktails displayed in each row from 4 to 3. This change allows for a more balanced and harmonious layout, making it easier for users to focus on the featured cocktails and their descriptions. With this update, users can enjoy a more enjoyable browsing experience and discover new favorite cocktails with ease.
+- I optimised the layout of the webpage's cocktail display to provide a more streamlined and visually appealing experience. To achieve this, we have reduced the number of cocktails displayed in each row from 4 to 3. This change allows for a more balanced and harmonious layout, making it easier for users to focus on the featured cocktails and their descriptions. With this update, users can enjoy a more enjoyable browsing experience and discover new favourite cocktails with ease.
 
-- I decided to introduce a new Account Management section. This feature allows users to take control of their account settings and customize their experience on Mixology Master.
-With this new section, users can now update their username, which provides an opportunity to personalize their identity on our platform. Additionally, I have added the ability to delete an account, giving users more control over their online presence and allowing them to easily remove their information from the database.
+- I decided to introduce a new Account Management section. This feature allows users to take control of their account settings and customise their experience on Mixology Master.
+With this new section, users can now update their username, which provides an opportunity to personalise their identity on our platform. Additionally, I have added the ability to delete an account, giving users more control over their online presence and allowing them to easily remove their information from the database.
 
 ### ADDITIONAL PAGES :
 
 **Unplanned Feature Addition: Account Management**
 
-- During the development process, I introduced an unforeseen feature addition to the platform: the Account Management section on the user's dashboard. This section allows users to update their username and delete their account, providing an opportunity for them to personalize their identity on the platform. In order to change the user's name, the page is being redirected to the new HTML page. This change was not part of the original plan, and therefore, I did not create wireframes for this page.
+- During the development process, I introduced an unforeseen feature addition to the platform: the Account Management section on the user's dashboard. This section allows users to update their username and delete their account, providing an opportunity for them to personalise their identity on the platform. The page redirects to the new HTML page when the user changes their name. This change was not part of the original plan, and therefore, I did not create wireframes for this page.
 
 ![Account Management section on user's dashboard](/docs/images/account-management.PNG)
 
@@ -233,13 +232,13 @@ The navigation bar is a persistent feature on every page and has been designed t
 
 ### Footer :
 
-The footer is a consistently present element on every page, featuring a comprehensive design that is fully responsive and adaptable to all devices and screen resolutions. Additionally, the footer includes a section dedicated to social media links, which open in a new tab when clicked, allowing users to seamlessly engage with the organization's online presence without disrupting their navigation experience.
+The footer is a consistently present element on every page, featuring a comprehensive design that is fully responsive and adaptable to all devices and screen resolutions. Additionally, the footer includes a section dedicated to social media links, which open in a new tab when clicked, allowing users to seamlessly engage with the organisation's online presence without disrupting their navigation experience.
 
 ![Footer - mobile & desktop view](/docs/images/footer.png)
 
 ### Hero image :
 
-The hero image is strategically featured on the home page to immediately capture the user's attention and effectively communicate the purpose of the website. To ensure an optimal user experience, the hero image is designed to be responsive, seamlessly adapting to different screen sizes and devices. This means that users viewing the website on desktop computers will see a distinct hero image, while mobile device users will be presented with a tailored version that is optimized for their smaller screen size and mobile-specific navigation needs
+The hero image is strategically featured on the home page to immediately capture the user's attention and effectively communicate the purpose of the website. To ensure an optimal user experience, the hero image is designed to be responsive, seamlessly adapting to different screen sizes and devices. This means that users viewing the website on desktop computers will see a distinct hero image, while mobile device users will be presented with a tailored version that is optimised for their smaller screen size and mobile-specific navigation needs.
 
 **Desktop** :
 
@@ -252,13 +251,13 @@ The hero image is strategically featured on the home page to immediately capture
 
 ### Introduction section :
 
-The introduction section of the website is designed to quickly convey the purpose and essence of the platform, allowing users to assess whether it is suitable for their interests within a brief timeframe. Following this initial section, a visually appealing divider image featuring a selection of fresh and tasty cocktails is prominently displayed. However, in consideration of mobile device users, this image is strategically hidden from view to prevent clutter and ensure an unobstructed user experience on smaller screens, ensuring that the content remains easily accessible and readable
+The introduction section of the website is designed to quickly convey the purpose and essence of the platform, allowing users to assess whether it is suitable for their interests within a brief timeframe. Following this initial section, a visually appealing divider image featuring a selection of fresh and tasty cocktails is prominently displayed. However, in consideration of mobile device users, this image is strategically hidden from view to prevent clutter and ensure an unobstructed user experience on smaller screens, ensuring that the content remains easily accessible and readable.
 
 ![Introduction section](/docs/images/introduction-section.png)
 
 ### Information section :
 
-The "What's a Cocktail Spec?" and "Is a Bartender Kit Needed?" sections of this website provide valuable information for users looking to explore the world of cocktail-making. The "What's a Cocktail Spec?" section explains the concept of a cocktail specification, which is a detailed and precise recipe that includes the exact measurements of each ingredient, specific type and brand of alcohol or mixer, preparation method, and any garnishes or finishing touches. The "Is a Bartender Kit Needed?" section addresses the importance of having a basic bartender kit, which typically includes essential tools such as a shaker, jigger, strainer, muddler, and bar spoon. This information aims to educate users on the importance of accuracy and efficiency in cocktail preparation, and provides guidance on how to get started with their own bartending journey.
+The "What's a Cocktail Spec?" and "Is a Bartender Kit Needed?" sections of this website provide valuable information for users looking to explore the world of cocktail-making. The "What's a Cocktail Spec?" section explains the concept of a cocktail specification, which is a detailed and precise recipe that includes the exact measurements of each ingredient, a specific type and brand of alcohol or mixer, the preparation method, and any garnishes or finishing touches. The "Is a Bartender Kit Needed?" section addresses the importance of having a basic bartender kit, which typically includes essential tools such as a shaker, jigger, strainer, muddler, and bar spoon. This information aims to educate users on the importance of accuracy and efficiency in cocktail preparation and provides guidance on how to get started with their own bartending journey.
 
 ![Information section](/docs/images/information-section.png)
 
@@ -271,7 +270,7 @@ The Recipes page header section provides an overview of the purpose of this page
 
 ### Filter and Search bar :
 
-The "Alcohol Type Filter" and "Search Bar" features enable users to quickly and easily discover the perfect cocktail recipe. The "Alcohol Type Filter" allows users to narrow down their search by selecting from a range of spirits, such as gin, whiskey, rum, or vodka, to find cocktails that feature their preferred base spirit. The "Search Bar" enables users to search for cocktails by name. By combining these two features, users can rapidly locate and explore a vast array of cocktail recipes, making it easy to find the perfect drink to suit their taste preferences. On mobile devices, the "Alcohol Type Filter" toggles to the icon for easy access, allowing users to quickly switch between different spirit options without having to navigate through multiple menus.
+The "Alcohol Type Filter" and "Search Bar" features enable users to quickly and easily discover the perfect cocktail recipe. The "Alcohol Type Filter" allows users to narrow down their search by selecting from a range of spirits, such as gin, whisky, rum, or vodka, to find cocktails that feature their preferred base spirit. The "Search Bar" enables users to search for cocktails by name. By combining these two features, users can rapidly locate and explore a vast array of cocktail recipes, making it easy to find the perfect drink to suit their taste preferences. On mobile devices, the "Alcohol Type Filter" toggles to the icon for easy access, allowing users to quickly switch between different spirit options without having to navigate through multiple menus.
 
 **Desktop** :
 
@@ -290,18 +289,28 @@ The cocktails section displays a collection of cocktail recipes, each presented 
 
 ### Contact us section :
 
-This contact us form is designed to provide a convenient way for users to get in touch with admin. The form allows users to submit their name, email address and message.
+This contact form is designed to provide a convenient way for users to get in touch with admin. The form allows users to submit their name, email address, and message.
 
 ![Contact us section](/docs/images/contact-us.PNG)
 
 ### Register section :
 
-The register page allows users to create a personal account, giving them access to a secure area where they can manage their own cocktail recipes. Upon registration, users can choose a unique username and password, which will serve as their credentials for logging in to the platform.
+The registration page allows users to create a personal account, giving them access to a secure area where they can manage their own cocktail recipes. Upon registration, users can choose a unique username and password, which will serve as their credentials for logging in to the platform.
 
 ![Register section](/docs/images/register.PNG)
 
+### "Thank you" / confirmation page :
+
+This page serves as a confirmation of successful contact submission, displaying a friendly message to acknowledge receipt of the user's inquiry. The page provides a brief update on our expected response time, ensuring transparency and setting realistic expectations. A convenient 'Take me back!' button allows users to easily navigate back to the homepage, where they can continue exploring the platform or initiate a new contact request if needed. This page provides a seamless and user-friendly experience, ensuring that users feel valued and informed throughout the communication process.
+
+![Thank you / confirmation page](/docs/images/thank-you-page.PNG)
+
 ### Login section :
 
-The login page allows users to log into their personal account, giving them access to the user dashboard. By logging in users can take ownership of their cocktail creations and enjoy a more personalized experience on the platform.
+The login page allows users to log into their personal account, giving them access to the user dashboard. By logging in, users can take ownership of their cocktail creations and enjoy a more personalised experience on the platform.
 
 ![Login section](/docs/images/login.PNG)
+
+### Dashboard - account management section :
+
+This feature allows users to take control of their account settings and customise their experience on Mixology Master. With this new section, users can now update their username, which provides an opportunity to personalise their identity on our platform. Additionally, the user has the ability to delete an account, giving them more control over their online presence and allowing them to easily remove their information from the database.
