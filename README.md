@@ -176,6 +176,20 @@ Images for this project has been downloaded from :
 
 **More information in credits section.**
 
+### Database
+
+In my application, I'm storing the data about users and cocktails, which are related to each other through the 'user_id' foreign key in the 'Cocktail model'. By using a relational database, I can define these relationships between tables, ensuring data consistency and integrity. Using a relational database allows me to :
+
+ - **Enforce data consistency** : 'Cocktail' model has a 'user_id' foreign key that references the 'id' column in the 'User' model. This foreign key ensures that every 'user_id' in the Cocktail table corresponds to a valid 'id' in the 'User' table.
+
+ - **Maintain data integrity** : The 'user_id' column in the 'Cocktail' table uses 'db.ForeignKey("user.id", ondelete="SET NULL")'. This setup means that if a user is deleted, the 'user_id' in the Cocktail table will be set to 'NULL' instead of leaving orphaned entries. This approach maintains referential integrity by not leaving 'user_id' values that do not correspond to any user.
+
+ - **Facilitate querying and filtering** : The foreign key relationship allows to perform efficient joins between the 'User' and 'Cocktail' tables. For example, admin can easily retrieve all cocktails created by a specific user or list all cocktails and their associated users.
+
+**Database model diagram** :
+
+![Database model diagram](./docs/images/database-diagram.PNG)
+
 ## The Skeleton Plane
 
 As part of an ongoing effort to continually improve the project, I identified a number of key features that were previously missing and were negatively impacting the overall user experience. In order to address this, I implemented several significant changes to the project, aimed at enhancing usability and functionality.
