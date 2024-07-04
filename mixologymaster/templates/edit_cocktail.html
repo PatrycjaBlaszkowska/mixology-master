@@ -17,11 +17,11 @@
                 <div class="form-group">
                     <label for="cocktail_category">Category :</label>
                     <select class="form-control" id="cocktail_category" name="cocktail_category">
-                        <option {% if cocktail.cocktail_category == 'Vodka' %} selected {% endif %}>Vodka</option>
-                        <option {% if cocktail.cocktail_category == 'Whisky' %} selected {% endif %}>Whisky</option>
-                        <option {% if cocktail.cocktail_category == 'Gin' %} selected {% endif %}>Gin</option>
-                        <option {% if cocktail.cocktail_category == 'Rum' %} selected {% endif %}>Rum</option>
-                        <option {% if cocktail.cocktail_category == 'Tequila' %} selected {% endif %}>Tequila</option>
+                        <option>Vodka</option>
+                        <option>Whisky</option>
+                        <option>Gin</option>
+                        <option>Rum</option>
+                        <option>Tequila</option>
                     </select>
                 </div> 
                 <div class="form-group">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group">
                     <label for="prep_instructions">Preparation instructions :</label>
-                    <textarea class="form-control" id="prep_instructions" rows="3" name="prep_instructions" required>{{ cocktail.instructions }}</textarea>
+                    <textarea class="form-control" id="prep_instructions" rows="3" name="prep_instructions" required>{{ cocktail.prep_instructions }}</textarea>
                 </div>
                 <button type="submit" class="btn btn-secondary">Edit cocktail</button>
             </form>

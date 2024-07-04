@@ -204,11 +204,11 @@ With this new section, users can now update their username, which provides an op
 
 - During the development process, I introduced an unforeseen feature addition to the platform: the Account Management section on the user's dashboard. This section allows users to update their username and delete their account, providing an opportunity for them to personalise their identity on the platform. The page redirects to the new HTML page when the user changes their name. This change was not part of the original plan, and therefore, I did not create wireframes for this page.
 
-![Account Management section on user's dashboard](/docs/images/account-management.PNG)
+![Account Management section on user's dashboard](/docs/images/edit-username.PNG)
 
 **New User Interface: Dashboard and Admin Panel**
 
-- In addition to the Account Management section, I also made significant changes to the user's dashboard and introduced an admin panel. The user's dashboard has been split into two separate sections: the user's new account management section and a "My Recipes" section, which displays a list of recipes they have added to the platform. The admin panel, on the other hand, allows administrators to manage all added recipes, including creating, editing, and deleting recipes. Due to these changes, we did not create wireframes for these pages as they were not part of the original design plan.
+- In addition to the Account Management section, I also made significant changes to the user's dashboard and introduced an admin panel. The user's dashboard has been split into two separate sections: the user's new account management section and a "My Recipes" section, which displays a list of recipes they have added to the platform. The admin panel, on the other hand, allows administrators to manage all added recipes, including creating, editing, and deleting recipes. Due to these changes, I did not create wireframes for this page as it was not part of the original design plan.
 
 ![Admin panel - new page](/docs/images/admin-panel.PNG)
 
@@ -293,17 +293,17 @@ This contact form is designed to provide a convenient way for users to get in to
 
 ![Contact us section](/docs/images/contact-us.PNG)
 
-### Register section :
-
-The registration page allows users to create a personal account, giving them access to a secure area where they can manage their own cocktail recipes. Upon registration, users can choose a unique username and password, which will serve as their credentials for logging in to the platform.
-
-![Register section](/docs/images/register.PNG)
-
 ### "Thank you" / confirmation page :
 
 This page serves as a confirmation of successful contact submission, displaying a friendly message to acknowledge receipt of the user's inquiry. The page provides a brief update on our expected response time, ensuring transparency and setting realistic expectations. A convenient 'Take me back!' button allows users to easily navigate back to the homepage, where they can continue exploring the platform or initiate a new contact request if needed. This page provides a seamless and user-friendly experience, ensuring that users feel valued and informed throughout the communication process.
 
 ![Thank you / confirmation page](/docs/images/thank-you-page.PNG)
+
+### Register section :
+
+The registration page allows users to create a personal account, giving them access to a secure area where they can manage their own cocktail recipes. Upon registration, users can choose a unique username and password, which will serve as their credentials for logging in to the platform.
+
+![Register section](/docs/images/register.PNG)
 
 ### Login section :
 
@@ -314,3 +314,35 @@ The login page allows users to log into their personal account, giving them acce
 ### Dashboard - account management section :
 
 This feature allows users to take control of their account settings and customise their experience on Mixology Master. With this new section, users can now update their username, which provides an opportunity to personalise their identity on our platform. Additionally, the user has the ability to delete an account, giving them more control over their online presence and allowing them to easily remove their information from the database.
+
+![Dashboard - account management](/docs/images/account-management.PNG)
+
+### Edit username section / page :
+
+This page / feature allows users to modify their existing username, providing an opportunity to refresh their online identity or correct any typos. By filling out the updated information, users can submit their new username and save the changes. To ensure a seamless experience, this page includes checks to guarantee that the chosen username is unique and available for use, preventing any potential conflicts or duplicates. With this update feature, users can easily customize their account details and maintain a consistent online presence.
+
+![Edit username page](/docs/images/edit-username.PNG)
+
+### Dashboard - cocktail management section :
+
+The 'My Recipes' section is a personalised space where users can curate and manage their own collection of recipes, adding new ones, editing existing ones, and deleting any that are no longer needed. This feature allows users to easily access and organise their favourite recipes, making it simple to revisit and experiment with different flavours and combinations. Additionally, users can also access a complimentary guide on how to create effective recipes.
+
+![Dashboard - cocktails management](/docs/images/cocktail-management.PNG)
+
+### Add cocktail page :
+
+The 'Add Cocktail' page allows users to create and submit their own unique cocktail recipes to their personalised 'My Recipes' section. Users can fill out a form providing essential details such as cocktail name, description, and category (by selecting from a list of available alcohol types). Additionally, users can specify ingredients and prep instructions, allowing them to capture every detail of their recipe. Once the form is submitted, the new recipe will be added to their 'My Recipes' section, making it easily accessible and available for viewing on their dashboard.
+
+![Add cockail page](/docs/images/add-cocktail.PNG)
+
+### Edit cocktail page :
+
+The 'Edit Cocktail' page is where users can refine and customise their cocktail recipes by making changes to the essential details. Users can update the recipe name and description and add or modify the ingredients and preparation instructions. They can also select the type of alcohol used in the recipe, ensuring accurate categorization and discovery by other users. Once saved, the updated recipe will be reflected on the recipes page and the user's dashboard.
+
+![Edit cockail page](/docs/images/edit-cocktail.PNG)
+
+### Admin panel :
+
+The admin panel allows administrators to manage all added recipes, including creating, editing, and deleting recipes.
+
+![Admin panel](/docs/images/admin-panel.PNG)
