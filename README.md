@@ -367,6 +367,9 @@ The admin panel allows administrators to manage all added recipes, including cre
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
+- [Python](https://developer.mozilla.org/en-US/docs/Glossary/Python)
+- [CI Python Linter](https://pep8ci.herokuapp.com/)
+- [PostgreSQL](https://www.postgresql.org/docs/)
 - [Jest](https://jestjs.io/)
 - [jQuery](https://jquery.com/)
 - [Gitpod](https://www.gitpod.io/)
@@ -378,6 +381,7 @@ The admin panel allows administrators to manage all added recipes, including cre
 - [Google Fonts](https://fonts.google.com/)
 - [QuillBot](https://quillbot.com/)
 - [Google Developer Tools](https://developer.chrome.com/docs/devtools/)
+- [Responsive Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?hl=en)
 
 ## Testing :
 
@@ -485,3 +489,22 @@ The Responsive Viewer browser extension was used to emulate the following device
 - 0 errors
 
 ![HTML validator results](/docs/images/html-validator.PNG)
+
+[CSS validator](https://jigsaw.w3.org/css-validator/)
+
+- 0 warnings
+- 0 errors
+
+![CSS validator results](/docs/images/css-validator.PNG)
+
+[JS validator](https://jshint.com/)
+
+- 0 errors
+- 0 warnings
+- One undefined variable - "module" :
+module.exports has been used to export js functions in order to test them with Jest. As per [freeCodeCamp](https://www.freecodecamp.org/news/module-exports-how-to-export-in-node-js-and-javascript/) the syntax is valid. Using if (typeof module === 'object') removed the error from the console but not from the JSHint.
+
+Bugs and Fixes :
+
+- Footer wasn't fixed at the bottom of the page :
+    - Fixed by using [::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after) pseudo-element element on body and set it to the same height as footer.
