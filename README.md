@@ -476,3 +476,8 @@ The Responsive Viewer browser extension was used to emulate the following device
 
 ![Responsive viewer - part one](/docs/images/responsive-viewer-first.PNG)
 ![Responsive viewer - part two](/docs/images/responsive-viewer-second.PNG)
+
+### Validation :
+
+[HTML validator]
+
