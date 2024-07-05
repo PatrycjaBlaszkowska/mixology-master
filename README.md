@@ -378,3 +378,15 @@ The admin panel allows administrators to manage all added recipes, including cre
 - [Google Fonts](https://fonts.google.com/)
 - [QuillBot](https://quillbot.com/)
 - [Google Developer Tools](https://developer.chrome.com/docs/devtools/)
+
+## Testing :
+
+### User stories :
+
+[User stories testing](/docs/testing/testing.md)
+
+### Automatic Testing(Jest) :
+
+As part of testing protocol, all functions have undergone a thorough examination using Jest, a popular JavaScript testing framework. Each function has been carefully written and tested to ensure it meets the expected behavior and functionality requirements.
+
+![Jest tests results](/docs/images/jest-tests.PNG)
