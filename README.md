@@ -559,3 +559,15 @@ The Code Institiue student template was used to create this project.
 [Contact form background](https://unsplash.com/photos/clear-drinking-glass-with-brown-liquid-on-brown-wooden-table-ibh9J-fIgZU)
 
 [Section "devider"](https://www.pinterest.co.uk/pin/230528074665660483/)
+
+### Code :
+
+### Libraries :
+
+- [Bootstrap](https://getbootstrap.com/) :
+    - Used for navigation bar, grid system, buttons.
+
+### Tutorials :
+
+- YouTube Python Authentication Tutorial provided guidance for setting up authentication features :
+    - [YouTube User Authentication Tutorial](https://www.youtube.com/watch?v=t9zA1gvrTvo)
