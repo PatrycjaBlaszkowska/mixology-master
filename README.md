@@ -369,7 +369,10 @@ The admin panel allows administrators to manage all added recipes, including cre
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
 - [Python](https://developer.mozilla.org/en-US/docs/Glossary/Python)
 - [CI Python Linter](https://pep8ci.herokuapp.com/)
+- [SQLAlchemy](https://www.sqlalchemy.org/)
 - [PostgreSQL](https://www.postgresql.org/docs/)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/)
 - [Jest](https://jestjs.io/)
 - [jQuery](https://jquery.com/)
 - [Gitpod](https://www.gitpod.io/)
@@ -533,3 +536,26 @@ The Code Institiue student template was used to create this project.
 1. From the repository, click **Fork**.
 2. Give your repository a name.
 3. Click **Create fork**.
+
+## Credits 
+
+### Images :
+
+- Gestational Diabates
+- Unsplash
+- Pinterest
+- Iconfinder
+
+[Cocktail default image](https://www.gestationaldiabetes.co.uk/wp-content/uploads/2023/02/icon-cold-drinks.png)
+
+[User default image](https://www.iconfinder.com/icons/4696674/account_avatar_male_people_person_profile_user_icon)
+
+[Hero image desktop](https://unsplash.com/photos/three-clear-glass-cups-with-juice-xBFTjrMIC0c)
+
+[Hero image mobile](https://www.pinterest.co.uk/pin/739786676283901616/)
+
+[Login & Register forms - background](https://unsplash.com/photos/four-glass-cups-on-white-surface-JjGLEN7T8xI)
+
+[Contact form background](https://unsplash.com/photos/clear-drinking-glass-with-brown-liquid-on-brown-wooden-table-ibh9J-fIgZU)
+
+[Section "devider"](https://www.pinterest.co.uk/pin/230528074665660483/)
