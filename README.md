@@ -504,7 +504,32 @@ The Responsive Viewer browser extension was used to emulate the following device
 - One undefined variable - "module" :
 module.exports has been used to export js functions in order to test them with Jest. As per [freeCodeCamp](https://www.freecodecamp.org/news/module-exports-how-to-export-in-node-js-and-javascript/) the syntax is valid. Using if (typeof module === 'object') removed the error from the console but not from the JSHint.
 
-Bugs and Fixes :
+### Bugs and Fixes :
 
 - Footer wasn't fixed at the bottom of the page :
     - Fixed by using [::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after) pseudo-element element on body and set it to the same height as footer.
+
+## Deployment 
+
+The master branch of this repository is the most current version and has been used for the deployed version of the site.
+The Code Institiue student template was used to create this project.
+
+[Code Institute Template for Gitpod](https://github.com/Code-Institute-Org/gitpod-full-template)
+
+1. Click **Use This Template** button.
+2. Give your repository a name, and description.
+3. Open [Gitpod EDI](https://www.gitpod.io/) and log into your account.
+4. Click **New Workspace** button.
+5. Create a workspace from your project repository by creating a clone.
+
+### Creating a clone :
+
+1. From the repository, click **Code**.
+2. In the **Clone >> HTTPS** section, copy the clone URL for the repository.
+3. Paste a link into the designated area on the Gitpod.
+
+### Forking :
+
+1. From the repository, click **Fork**.
+2. Give your repository a name.
+3. Click **Create fork**.
