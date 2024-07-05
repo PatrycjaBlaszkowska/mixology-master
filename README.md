@@ -479,5 +479,9 @@ The Responsive Viewer browser extension was used to emulate the following device
 
 ### Validation :
 
-[HTML validator]
+[HTML validator](https://validator.w3.org/)
 
+- 0 warnings
+- 0 errors
+
+![HTML validator results](/docs/images/html-validator.PNG)
