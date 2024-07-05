@@ -390,3 +390,89 @@ The admin panel allows administrators to manage all added recipes, including cre
 As part of testing protocol, all functions have undergone a thorough examination using Jest, a popular JavaScript testing framework. Each function has been carefully written and tested to ensure it meets the expected behavior and functionality requirements.
 
 ![Jest tests results](/docs/images/jest-tests.PNG)
+
+### Manual Testing :
+
+- Navigation bar :
+    - Navbar remains fully responsive across all devices and resolutions. 
+    - On mobile devices, the navigation bar successfully transitions to a hamburger menu.
+    - All links are working as expected.
+
+- Footer :
+    - Footer remains fully responsive across all devices and resolutions. 
+    - All links are working as expected.
+
+- Buttons :
+    - All buttons across pages are working as expected.
+    - Buttons remain fully responsive across all devices and resolutions.
+
+- Grid system(Bootstrap) :
+    - Grid system is working as intended successfully changing amount of collumns on smaller devices making website fully responsive.
+
+- Filter section :
+    - The category filter efficiently fetches categories from the database and allows users to filter cocktails based on their chosen alcohol type.
+    - The user-friendly search bar quickly and accurately returns results, making it simple for users to find their desired cocktails by name.
+
+- Cocktails section :
+    - "Read" button is working as expected.
+    - The cocktail name on each recipe page, which is also a clickable link, allowing users to quickly jump back to the search results page and explore other related cocktails, is working as expected.
+
+- Adding new cocktail :
+    - Upon submitting the form, the entered cocktail details are successfully stored in the database, enabling users to view and explore their newly created recipe on relevant pages.
+
+- Editing existing cocktail :
+    - Upon submitting the form, the updated cocktail details are successfully stored in the database, enabling users to view changes made to the recipe on relevant pages.
+
+- Register form :
+    - The registration process successfully adds the user to the database, providing them with secure login credentials and access to premium features and content.
+
+- Login form :
+    - Upon submitting the form, the user is successfully redirected to the user's dashboard, where they gain access to premium features and content.
+
+- Contact form :
+   - Upon submitting the form, the user is successfully redirected to the confirmation page.
+
+- Delete feature :
+    - After confirming the deletion, the user's account or cocktail is successfully removed from the database.
+
+- Change username form :
+    - Upon submitting the form, the updated username is successfully stored in the database and reflected on the user's dashboard.
+
+- Logout :
+    - The logout button effectively logs the user out of the system, securely ending their session and clearing all authentication data.
+
+### Devices used during testing :
+- Desktop PC
+- Laptop 
+- Lenovo Tab M10 Plus
+- Iphone
+
+### Chrome Dev Tools :
+
+The project's responsiveness was thoroughly tested using Chrome Dev Tools, which allowed for precise debugging and optimisation. 
+The Responsive Viewer browser extension was used to emulate the following devices :
+
+- Iphone SE
+- Iphone XR
+- Iphone 12 Pro
+- Iphone 14 Pro Max
+- Pixel 7
+- Pixel 2 
+- Samsung Galaxy S8+
+- Samsung Galaxy S20 Ultra
+- Samsung Galaxy Note20
+- iPad Mini
+- iPad Air
+- iPad Pro
+- Surface Pro 7
+- Surface Duo
+- Galaxy Fold
+- Asus Zenbook Fold
+- Samsung Galaxy A51/71
+- Nest Hub
+- Nest Hub Max
+- Fire HD 10
+- Pixelbook Go
+
+![Responsive viewer - part one](/docs/images/responsive-viewer-first.PNG)
+![Responsive viewer - part two](/docs/images/responsive-viewer-second.PNG)
