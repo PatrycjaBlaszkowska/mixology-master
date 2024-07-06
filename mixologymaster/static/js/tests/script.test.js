@@ -106,36 +106,6 @@ describe('Search and Filter Functionality', () => {
     });
 });
 
-describe('Delete Warning Modal', () => {
-    let deleteModal, confirmDeleteBtn;
-
-    beforeAll(() => {
-        deleteModal = document.getElementById('delete-modal');
-        confirmDeleteBtn = document.getElementById('confirm-delete-btn');
-    });
-
-    test('Shows delete modal with correct item type and id', () => {
-        const button = document.createElement('button');
-        button.setAttribute('data-toggle', 'modal');
-        button.setAttribute('data-target', '#delete-modal');
-        button.setAttribute('data-item-id', '1');
-        button.setAttribute('data-item-type', 'cocktail');
-
-        document.body.appendChild(button);
-
-        fireEvent.click(button);
-
-        // Simulate showing the modal and setting data attributes
-        document.getElementById('item-type').textContent = 'cocktail';
-        confirmDeleteBtn.setAttribute('data-item-id', '1');
-        confirmDeleteBtn.setAttribute('data-item-type', 'cocktail');
-
-        expect(deleteModal.querySelector('#item-type').textContent).toBe('cocktail');
-        expect(confirmDeleteBtn.getAttribute('data-item-id')).toBe('1');
-        expect(confirmDeleteBtn.getAttribute('data-item-type')).toBe('cocktail');
-    });
-});
-
 /**
  * Testing delete modal
  */

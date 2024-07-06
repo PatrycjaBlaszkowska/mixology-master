@@ -562,7 +562,7 @@ The Code Institiue student template was used to create this project.
 
 ### Code :
 
-### Libraries :
+### Frameworks :
 
 - [Bootstrap](https://getbootstrap.com/) :
     - Used for navigation bar, grid system, buttons.
