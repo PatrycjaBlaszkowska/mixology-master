@@ -448,6 +448,9 @@ As part of testing protocol, all functions have undergone a thorough examination
 - Logout :
     - The logout button effectively logs the user out of the system, securely ending their session and clearing all authentication data.
 
+- Admin panel :
+    - The administrator can effectively manage all cocktails on the admin panel to ensure a positive user experience and proper moderation.
+
 ### Devices used during testing :
 - Desktop PC
 - Laptop 
