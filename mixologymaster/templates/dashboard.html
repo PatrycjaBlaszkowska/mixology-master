@@ -4,7 +4,7 @@
 <div class="container mt-5">
     <div class="row">
         <!-- Account Management Sidebar -->
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-8 offset-md-2">
             <div class="card bg-dark">
                 <!-- Heading for Account Management -->
                 <div class="card-header border-bottom text-center">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <!-- Main Content Area -->
-        <div class="col-md-9">
+        <div class="col-lg-9">
             <!-- Welcome Header and Action Buttons -->
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h1>Hi {{ current_user.username }}</h1>
@@ -41,7 +41,7 @@
                 <div class="row">
                     {% for cocktail in cocktails %}
                         {% if current_user.id == cocktail.user_id %}
-                            <div class="col-md-4 mb-4">
+                            <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
                                     <img src="{{ url_for('static', filename='images/icon-cocktail.png') }}" class="card-img-top" alt="cocktail icon">
                                     <div class="card-body">
