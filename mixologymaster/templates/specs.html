@@ -10,7 +10,7 @@
     <!-- Filter and Search Section -->
     <div class="row justify-content-center mb-4">
       <!-- Filter by Category Dropdown -->
-      <div class="col-12 col-md-3 mb-3 mb-md-0">
+      <div class="col-12 col-lg-3 col-md-4 mb-3 mb-md-0">
         <div class="card p-3 shadow-sm border-0">
           <h5 class="mb-2 d-none d-md-block">Filter by Category</h5>
           <button class="btn custom-btn d-md-none mb-2 p-2" type="button" data-toggle="collapse" data-target="#filterDropdown" aria-expanded="false" aria-controls="filterDropdown">
@@ -52,7 +52,7 @@
     <!-- Cocktails Listing -->
     <div class="row" id="cocktailList">
         {% for cocktail in cocktails %}
-        <div class="col-md-4 mb-4 cocktail-item" data-category="{{ cocktail.cocktail_category }}">
+        <div class="col-lg-4 col-md-6 mb-4 cocktail-item" data-category="{{ cocktail.cocktail_category }}">
             <div class="card cocktail-card shadow-sm border-0">
                 <img src="{{ url_for('static', filename='images/icon-cocktail.png') }}" class="card-img-top" alt="cocktail icon">
                 <div class="card-body d-flex flex-column">
