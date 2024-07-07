@@ -104,7 +104,7 @@ def edit_cocktail(cocktail_id):
         # is not the current cocktail
         existing_cocktail = (
             Cocktail.query
-            .filter_by(cocktail_name=cocktail_name)
+            .filter_by(cocktail_name=new_cocktail_name )
             .first()
         )
         if existing_cocktail and existing_cocktail.cocktail_id != cocktail_id:
