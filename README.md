@@ -269,6 +269,12 @@ The introduction section of the website is designed to quickly convey the purpos
 
 ![Introduction section](/docs/images/introduction-section.png)
 
+### Welcome back section :
+
+The "welcome-back" section of the website greets the user by their username and encourages them to share their latest cocktail creation. It prompts the user to start creating a new recipe by providing a button to add a new cocktail. Additionally, the section provides links for the user to browse the latest recipes added by the community or to view their own recipes on their dashboard. It also suggests exploring popular cocktail categories for inspiration. The overall design of this section is to engage the user and encourage them to actively participate in the cocktail-sharing community on the website.
+
+![Welcome back section](/docs/images/welcome-back.PNG)
+
 ### Information section :
 
 The "What's a Cocktail Spec?" and "Is a Bartender Kit Needed?" sections of this website provide valuable information for users looking to explore the world of cocktail-making. The "What's a Cocktail Spec?" section explains the concept of a cocktail specification, which is a detailed and precise recipe that includes the exact measurements of each ingredient, a specific type and brand of alcohol or mixer, the preparation method, and any garnishes or finishing touches. The "Is a Bartender Kit Needed?" section addresses the importance of having a basic bartender kit, which typically includes essential tools such as a shaker, jigger, strainer, muddler, and bar spoon. This information aims to educate users on the importance of accuracy and efficiency in cocktail preparation and provides guidance on how to get started with their own bartending journey.
