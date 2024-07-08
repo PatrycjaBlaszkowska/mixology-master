@@ -603,6 +603,51 @@ The Code Institiue student template was used to create this project.
 2. Give your repository a name.
 3. Click **Create fork**.
 
+
+### Creating an App with the Heroku :
+
+1. Navigate to [Heroku.com](https://www.heroku.com/).
+2. Create a new account or login.
+3. Click the **new** button, then **create new app** button.
+4. Choose your app name and the region and click **create app**.
+
+### Connecting your Heroku account to your Github repository :
+
+1. In your app choose **Deploy** tab and choose *Github* as your deployment method. 
+2. Enter the GitHub repository name and click on *Search*.
+3. Once the correct repository is found, click on *Connect*.
+
+### Setting you enviroment variables  :
+
+1. Navigate to **Settings** tab and click on *Reveal Config Vars* and set following variables :
+
+- DATABASE_URL : URL to your databse
+- DEBUG : Can be set to true but **ONLY** during development. It's extremely important to change it to false once development process is over.
+- IP : 0.0.0.0
+- PORT : 5000
+- SECRET_KEY : Your custom secret key.
+
+**PLEASE NOTE THAT YOU SHOULD NEVER SHARE ABOVE DETAILS WITH ANYONE DUE TO THE SECURITY REASONS!**
+
+**IMPORTANT** *In order to successfully deploy your project to Heroku, you must include requirements.txt and Procfile files.* 
+
+The following commands in the Gitpod CLI will create the relevant files :
+
+`pip3 freeze --local > requirements.txt`
+
+`echo web: python app.py > Procfile`
+
+### Running project locally :
+
+**You will need create a env.py file, which contains all the enviroment variables you used on Heroku, Please note this file should be added to a .gitignore file to prevent the file from being commited.** 
+
+**AS MENTION ALREADY PLEASE REMEMBER THAT YOU SHOULD NEVER SHARE THESE DETAILS WITH ANYONE DUE TO THE SECURITY REASONS!**
+
+1. Please refer to the above guide in order to clone or fork the repository. 
+2. Once the project has been loaded please run the following command in the CLI to install the project required packages.
+
+`pip install -r requirements.txt`
+
 ## Credits 
 
 ### Images :
