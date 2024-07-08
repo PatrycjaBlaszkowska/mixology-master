@@ -176,7 +176,7 @@ Images for this project has been downloaded from :
 
 **More information in credits section.**
 
-### Database
+### Database :
 
 In my application, I'm storing the data about users and cocktails, which are related to each other through the 'user_id' foreign key in the 'Cocktail model'. By using a relational database, I can define these relationships between tables, ensuring data consistency and integrity. Using a relational database allows me to :
 
@@ -186,9 +186,52 @@ In my application, I'm storing the data about users and cocktails, which are rel
 
  - **Facilitate querying and filtering** : The foreign key relationship allows to perform efficient joins between the 'User' and 'Cocktail' tables. For example, admin can easily retrieve all cocktails created by a specific user or list all cocktails and their associated users.
 
-**Database model diagram** :
+**Database schema** :
 
-![Database model diagram](./docs/images/database-diagram.PNG)
+
+#### User Table :
+
+| Column Name | Data Type    | Constraints                     | Description                           |
+|-------------|--------------|---------------------------------|---------------------------------------|
+| id          | Integer      | Primary Key                     | Unique identifier for the user        |
+| username    | String(60)   | Unique, Not Null                | Username of the user                  |
+| password    | String(200)  | Not Null                        | Password for the user                 |
+| is_admin    | Boolean      | Default: False                  | Indicates if the user is an admin     |
+
+#### Cocktail Table :
+
+| Column Name           | Data Type   | Constraints                                 | Description                            |
+|-----------------------|-------------|---------------------------------------------|----------------------------------------|
+| cocktail_id           | Integer     | Primary Key                                 | Unique identifier for the cocktail     |
+| cocktail_name         | String      | Not Null, Unique                            | Name of the cocktail                   |
+| cocktail_category     | String      | Not Null                                    | Category of the cocktail               |
+| user_id               | Integer     | Foreign Key (`user.id`), On Delete: SET NULL, Nullable | ID of the user who created the cocktail |
+| ingredients           | String      | Not Null                                    | Ingredients of the cocktail            |
+| prep_instructions     | String      | Not Null                                    | Preparation instructions for the cocktail |
+| description           | String      | Not Null                                    | Description of the cocktail            |
+
+#### Relationships :
+
+- **User - Cocktails**: One-to-Many relationship
+  - A user can create multiple cocktails.
+  - The `user_id` column in the `Cocktail` table is a foreign key that references the `id` column in the `User` table.
+
+#### Example Entries :
+
+**User**
+
+| id | username | password   | is_admin |
+|----|----------|------------|----------|
+| 1  | johndoe  | hashed_pwd | False    |
+| 2  | admin    | hashed_pwd | True     |
+
+**Cocktail**
+
+| cocktail_id | cocktail_name | cocktail_category | user_id | ingredients | prep_instructions | description            |
+|-------------|----------------|-------------------|---------|-------------|-------------------|------------------------|
+| 1           | Margarita      | Tequila           | 1       | Tequila, Lime juice, Triple sec | Shake with ice and strain into a salt-rimmed glass | A classic cocktail with a tangy and refreshing taste |
+| 2           | Mojito         | Rum               | NULL    | Rum, Mint, Lime, Sugar, Soda | Muddle mint and lime, add rum and soda | A refreshing cocktail with a minty twist |
+
 
 ## The Skeleton Plane
 
