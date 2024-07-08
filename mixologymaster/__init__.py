@@ -22,4 +22,4 @@ else:
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
-from mixologymaster import routes
+from mixologymaster import routes  # noqa: E402

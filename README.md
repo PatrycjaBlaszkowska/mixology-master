@@ -396,7 +396,7 @@ The admin panel allows administrators to manage all added recipes, including cre
 
 As part of testing protocol, all functions have undergone a thorough examination using Jest, a popular JavaScript testing framework. Each function has been carefully written and tested to ensure it meets the expected behavior and functionality requirements.
 
-![Jest tests results](/docs/images/jest-tests.PNG)
+![Jest tests results](/docs/images/jest-test.PNG)
 
 ### Manual Testing :
 
@@ -510,10 +510,21 @@ The Responsive Viewer browser extension was used to emulate the following device
 - One undefined variable - "module" :
 module.exports has been used to export js functions in order to test them with Jest. As per [freeCodeCamp](https://www.freecodecamp.org/news/module-exports-how-to-export-in-node-js-and-javascript/) the syntax is valid. Using if (typeof module === 'object') removed the error from the console but not from the JSHint.
 
+![JS validator results](/docs/images/jshint.png)
+
+[Python validator](https://pep8ci.herokuapp.com/)
+
+- 0 errors
+
+![Python Linter results](/docs/images/python-linter.png)
+
 ### Bugs and Fixes :
 
 - Footer wasn't fixed at the bottom of the page :
     - Fixed by using [::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after) pseudo-element element on body and set it to the same height as footer.
+
+- Python linter was showing following error : "E402 module level import not at top of file" due to my module being imported on the bottom of the app :
+    - It's impossible to move this import to the top as it should come after the app has been created and configured so I decided to add [# noqa: E402](https://stackoverflow.com/questions/36827962/pep8-import-not-at-top-of-file-with-sys-path) on the bottom of the file which resolved the issue.
 
 ## Deployment 
 
