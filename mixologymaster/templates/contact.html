@@ -2,7 +2,7 @@
 {% block content %}
 <div class="contact-form-background">
   <div class="contact-form">
-    <form action="{{ url_for('confirmation') }}">
+    <form id="emailjs">
       <h1>Contact us!</h1>
       <label for="fname">First Name</label>
       <input
@@ -40,4 +40,40 @@
     </form>
   </div>
 </div>
+<!--EmailJS script-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("xmQzyoPHuUtXsXFl8");
+  })();
+
+  document.getElementById('emailjs').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const serviceID = 'service_596k5n9';
+    const templateID = 'mixology_master';
+    const autoReplyTemplateID = 'respond_message';
+
+    const templateParams = {
+      first_name: document.getElementById('fname').value,
+      last_name: document.getElementById('lname').value,
+      email_address: document.getElementById('email').value,
+      message: document.getElementById('message').value
+    };
+
+    // Send the main email
+    emailjs.send(serviceID, templateID, templateParams)
+      .then(function(response) {
+        // Send the auto-reply email
+        emailjs.send(serviceID, autoReplyTemplateID, {
+          email_address: templateParams.email_address
+        });
+
+        // Redirect to the thank you page
+        window.location.href = "{{ url_for('confirmation') }}";
+      }, function(error) {
+        alert('Failed to send the message. Please try again later.', error);
+      });
+  });
+</script>
 {% endblock %}
