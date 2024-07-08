@@ -113,13 +113,13 @@ footer {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-#introduction a , #specs-link-section a { 
+#introduction a , #specs-link-section a , #welcome-back a { 
     text-decoration: none; 
     font-weight: 800;
     color: #FAFAFA;
 }
 
-#introduction a:hover , #specs-link-section a:hover { 
+#introduction a:hover , #specs-link-section a:hover , #welcome-back a:hover { 
     text-decoration: underline; 
 }
 
