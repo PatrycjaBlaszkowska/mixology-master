@@ -590,5 +590,6 @@ The Code Institiue student template was used to create this project.
 - YouTube Python Authentication Tutorial provided guidance for setting up authentication features :
     - [YouTube User Authentication Tutorial](https://www.youtube.com/watch?v=t9zA1gvrTvo)
 
-### Contect :
-    - I decided to populate my website with recipes myself, so potential users can browse through cocktails without relying on contributions from others. These recipes have been taken from [Good Food](https://www.bbcgoodfood.com/)
+### Content : 
+- I decided to populate my website with recipes myself, so potential users can browse through cocktails without relying on contributions from others. These recipes have been taken from :
+    - [Good Food](https://www.bbcgoodfood.com/)
