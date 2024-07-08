@@ -43,13 +43,13 @@ The cocktails section displays a collection of cocktail recipes, each presented 
 
 **Desktop** :
 
-![Navbar - desktop view](/docs/images/navbar-desktop.png)
+![Navbar - desktop view](/docs/images/navbar-desktop-logged-in.PNG)
 
 **Mobile** :
 
 ![Navbar - mobile view(hamburger)](/docs/images/navbar-mobile-hamburger.png)
 
-![Navbar - mobile view](/docs/images/navbar-mobile.png)
+![Navbar - mobile view](/docs/images/navbar-mobile-logged-in.PNG)
 
 ### 2. As a logged-in user, I expect the login process to be seamless and efficient.
 
