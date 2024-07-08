@@ -89,6 +89,7 @@ def add_cocktail():
 
 
 @app.route('/edit_cocktail/<int:cocktail_id>', methods=['GET', 'POST'])
+@login_required
 def edit_cocktail(cocktail_id):
     cocktail = Cocktail.query.get_or_404(cocktail_id)
 
@@ -247,6 +248,7 @@ def dashboard(username):
 
 
 @app.route('/admin_panel')
+@login_required
 def admin_panel():
     # Render all cocktails
     cocktails = Cocktail.query.all()
@@ -264,6 +266,7 @@ def logout():
 
 
 @app.route('/change_username/<username>', methods=['GET', 'POST'])
+@login_required
 def change_username(username):
     # Fetch user data from database
     user = User.query.filter_by(username=username).first_or_404()

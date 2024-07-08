@@ -575,6 +575,9 @@ module.exports has been used to export js functions in order to test them with J
 - Python linter was showing following error : "E402 module level import not at top of file" due to my module being imported on the bottom of the app :
     - It's impossible to move this import to the top as it should come after the app has been created and configured so I decided to add [# noqa: E402](https://stackoverflow.com/questions/36827962/pep8-import-not-at-top-of-file-with-sys-path) on the bottom of the file which resolved the issue.
 
+- During testing process I discovered that 'admin panel', 'edit cocktail' and 'edit username' pages can be access without authentication (by copying a URL) :
+    - I fixed it by using '@login_required' wrapper. 
+
 ## Deployment 
 
 The master branch of this repository is the most current version and has been used for the deployed version of the site.
