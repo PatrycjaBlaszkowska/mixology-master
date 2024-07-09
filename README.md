@@ -352,7 +352,8 @@ The cocktails section displays a collection of cocktail recipes, each presented 
 
 ### Contact us section :
 
-This contact form is designed to provide a convenient way for users to get in touch with admin. The form allows users to submit their name, email address, and message.
+
+This contact form is designed to provide a convenient way for users to get in touch with the admin. Upon submission, the form sends an email to the admin with the user's first and last name, email address, and message details, and also sends an automatic response to the user, confirming receipt of their message.
 
 ![Contact us section](/docs/images/contact-us.PNG)
 
@@ -417,7 +418,6 @@ The admin panel allows administrators to manage all added recipes, including cre
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
 - [Python](https://developer.mozilla.org/en-US/docs/Glossary/Python)
-- [CI Python Linter](https://pep8ci.herokuapp.com/)
 - [SQLAlchemy](https://www.sqlalchemy.org/)
 - [PostgreSQL](https://www.postgresql.org/docs/)
 - [Bcrypt](https://www.npmjs.com/package/bcrypt)
@@ -486,7 +486,18 @@ As part of testing protocol, all functions have undergone a thorough examination
     - Upon submitting the form, the user is successfully redirected to the user's dashboard, where they gain access to premium features and content.
 
 - Contact form :
-   - Upon submitting the form, the user is successfully redirected to the confirmation page.
+   - Upon submission, the form sends an email to the admin with the user's name, email address, and message details, and also sends an automatic response to the user as well as redirects to the confirmation page successfully.
+
+![Filled contact form](/docs/images/emailjs-form.png)
+
+**Admin's inbox** :
+
+![Mixology Master's inbox](/docs/images/mixology-master-inbox.png)
+
+**User's inbox** :
+
+![User's inbox](/docs/images/user-inbox.png)
+
 
 - Delete feature :
     - After confirming the deletion, the user's account or cocktail is successfully removed from the database.
