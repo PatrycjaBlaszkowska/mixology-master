@@ -554,6 +554,10 @@ The Responsive Viewer browser extension was used to emulate the following device
 - 0 warnings
 - 0 errors
 
+**IMPORTANT**
+- Dashboard has been validated using following link . Username had to be icluded for the following reason :
+    - The dashboard route requires a username parameter in the URL `(/dashboard/<username>)` to properly render a personalized user dashboard. This parameter ensures the correct user's data is fetched and displayed. Accessing the dashboard without a username (e.g., /dashboard) results in a 404 error because Flask cannot match the URL to the defined route pattern, which explicitly expects a username segment.
+
 ![HTML validator results](/docs/images/html-validator.PNG)
 
 [CSS validator](https://jigsaw.w3.org/css-validator/)
@@ -567,8 +571,6 @@ The Responsive Viewer browser extension was used to emulate the following device
 
 - 0 errors
 - 0 warnings
-- One undefined variable - "module" :
-module.exports has been used to export js functions in order to test them with Jest. As per [freeCodeCamp](https://www.freecodecamp.org/news/module-exports-how-to-export-in-node-js-and-javascript/) the syntax is valid. Using if (typeof module === 'object') removed the error from the console but not from the JSHint.
 
 ![JS validator results](/docs/images/jshint.png)
 
@@ -588,6 +590,9 @@ module.exports has been used to export js functions in order to test them with J
 
 - During testing process I discovered that 'admin panel', 'edit cocktail' and 'edit username' pages can be access without authentication (by copying a URL) :
     - I fixed it by using '@login_required' wrapper. 
+
+- JSHint was showing one undefined variable - "module" :
+    - module.exports has been used to export js functions in order to test them with Jest. As per [freeCodeCamp](https://www.freecodecamp.org/news/module-exports-how-to-export-in-node-js-and-javascript/) the syntax is valid. Using `if (typeof module === 'object')` removed the error from the console. I also added `/* global module: false */` on the to of the JS file to remove error from JSHint.
 
 ## Deployment 
 
@@ -699,5 +704,5 @@ The following commands in the Gitpod CLI will create the relevant files :
     - [YouTube User Authentication Tutorial](https://www.youtube.com/watch?v=t9zA1gvrTvo)
 
 ### Content : 
-- I decided to populate my website with recipes myself, so potential users can browse through cocktails without relying on contributions from others. These recipes have been taken from :
+- I decided to populate my website with recipes myself, so potential users can browse through cocktails without relying on contributions from others. These recipes have been    taken from :
     - [Good Food](https://www.bbcgoodfood.com/)

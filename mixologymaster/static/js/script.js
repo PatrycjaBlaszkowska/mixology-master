@@ -1,8 +1,8 @@
+/* global $: false, module: false */
+
 /**
  * Function handles search bar and filter functionality.
  */
-
-/*global $:false*/
 
 function filterBySearch(cocktail, searchValue) {
     const cocktailName = cocktail.querySelector(".cocktail-name").textContent.trim().toLowerCase();
