@@ -698,6 +698,12 @@ The following commands in the Gitpod CLI will create the relevant files :
 - [Bootstrap](https://getbootstrap.com/) :
     - Used for navigation bar, grid system, buttons.
 
+
+### API :
+
+- [Emailjs](https://www.emailjs.com/) :
+    - The purpose of this API in the project is to handle the sending of emails based on user input from a form submission, providing a smooth and automated email communication process for users.
+
 ### Tutorials :
 
 - YouTube Python Authentication Tutorial provided guidance for setting up authentication features :
