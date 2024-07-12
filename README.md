@@ -434,6 +434,7 @@ The admin panel allows administrators to manage all added recipes, including cre
 - [QuillBot](https://quillbot.com/)
 - [Google Developer Tools](https://developer.chrome.com/docs/devtools/)
 - [Responsive Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?hl=en)
+- [Emailjs](https://www.emailjs.com/)
 
 ## Testing :
 
