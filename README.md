@@ -1,6 +1,6 @@
 # MIXOLOGY MASTER 
 
-[Link to a live site](https://mixologymaster-15c467037ed9.herokuapp.com/)
+<!--[Link to a live site](https://mixologymaster-15c467037ed9.herokuapp.com/)-->
 
 ![Responsive view of mixology master website](/docs/images/am-i-responsive.PNG)
 
